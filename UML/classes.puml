@@ -1,0 +1,137 @@
+@startuml dillinger_classes
+
+skinparam shadowing false
+'skinparam linetype polyline
+'skinparam linetype ortho
+
+skinparam class {
+    ArrowColor black
+    BorderColor black
+    BackGroundColor lightgrey
+}
+
+skinparam package {
+    ArrowColor black
+    BorderColor black
+    BackGroundColor white
+}
+
+package GameObjects {
+    abstract "Entity" as entity {
+        -pos : QPoint
+        -orientation : qreal
+        -boundingBox : QRect
+
+        +draw(p : QPainter) : void
+
+        +setPosition(pos : QPoint) : void
+        +setPosition(x : integer, y : integer) : void
+        +setOrientation(a : qreal) : void
+
+        +getBoundingBox() : QRect
+        +getPosition() : QPoint
+        +getOrientation() : qreal
+    }
+
+    abstract "StaticEntity" as statE {
+        -isTransparent : boolean
+        -isNoiseMuffler : boolean
+
+        +isTransparent() : boolean
+        +isNoiseMuffler() : boolean
+    }
+
+    abstract "DynamicEntity" as dynE {
+        -speed : qreal
+
+        +updatePos(delta_t : qreal) : void
+
+        +setSpeed(speed : QPoint) : void
+        +setSpeed(x : qreal, y : qreal) : void
+    }
+
+    class "Sprite" as sprite {
+        -image : QPixmap
+    }
+
+    abstract "Viewer" as viewer
+
+    class "Glass" as glass {
+
+    }
+
+    class "Wall" as wall {
+
+    }
+
+    class "Camera" as cam
+
+    abstract "Character" as charac
+
+    class "Guard" as guard
+
+    class "Cop" as cop
+
+    class "Player" as player
+
+    dynE -up-> sprite
+    statE .up.|> entity
+    dynE .up.|> entity
+
+    glass .up.|> statE
+    wall .up.|> statE
+    cam .up.|> statE
+
+    charac .up.|> dynE
+
+    guard .up.|> charac
+    cop .up.|> charac
+    player .up.|> charac
+
+    charac .down.|> viewer
+    cam .down.|> viewer
+}
+
+package Scenes {
+    abstract "Scene" as scene{
+        +changed() : void
+        +subscribe(o : Observer) : void
+        +draw(p : QPainter) : void
+    }
+
+    class Menu {
+
+    }
+
+    class GameScene {
+
+    }
+
+    Menu .up.|> scene
+    GameScene .up.|> scene
+}
+
+package Views {
+    abstract "Observer" as obs {
+        +refresh() : void
+        +stop() : void
+        +setScene(s : Scene) : void
+    }
+
+    class "GameWindow" as gameW  <<QMainWindow>>{
+
+    }
+
+    gameW .up.|> obs
+}
+
+scene o-> obs : "#observers"
+obs o-> scene : "#theScene"
+
+package GameLogic {
+    class PhysicLogic {
+
+    }
+}
+
+@enduml
