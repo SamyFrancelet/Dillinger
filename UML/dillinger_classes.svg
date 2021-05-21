@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="657px" preserveAspectRatio="none" style="width:1204px;height:657px;" version="1.1" viewBox="0 0 1204 657" width="1204px" zoomAndPan="magnify">
+    <defs />
+    <g>
+        <!--MD5=[06cf46bf135e5c00139299df7b1ddf7c]
+cluster GameObjects-->
+        <polygon fill="#FFFFFF" points="562,6,673,6,680,28.2969,1027,28.2969,1027,650,562,650,562,6" style="stroke:#000000;stroke-width:1.5;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="562" x2="680" y1="28.2969" y2="28.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="105" x="566" y="20.9951">GameObjects</text>
+        <!--MD5=[882802ef748bc4c56ce06a2b169b50bf]
+cluster Scenes-->
+        <polygon fill="#FFFFFF" points="16,64,80,64,87,86.2969,256,86.2969,256,400,16,400,16,64" style="stroke:#000000;stroke-width:1.5;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="87" y1="86.2969" y2="86.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="58" x="20" y="78.9951">Scenes</text>
+        <!--MD5=[999f80192410ad58725ac6d158b21eb2]
+cluster Views-->
+        <polygon fill="#FFFFFF" points="330,64,384,64,391,86.2969,538,86.2969,538,403,330,403,330,64" style="stroke:#000000;stroke-width:1.5;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="330" x2="391" y1="86.2969" y2="86.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="48" x="334" y="78.9951">Views</text>
+        <!--MD5=[a66bffc15e541d04d191abf3c9bb1357]
+cluster GameLogic-->
+        <polygon fill="#FFFFFF" points="1051,83,1144,83,1151,105.2969,1187,105.2969,1187,182,1051,182,1051,83" style="stroke:#000000;stroke-width:1.5;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="1051" x2="1151" y1="105.2969" y2="105.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="87" x="1055" y="97.9951">GameLogic</text>
+        <!--MD5=[467568f20bbf29da492dca29e9e0779e]
+class entity-->
+        <rect codeLine="19" fill="#D3D3D3" height="201.6563" id="entity" style="stroke:#000000;stroke-width:1.5;" width="204" x="797" y="41" />
+        <ellipse cx="876.75" cy="57" fill="#A9DCDF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M876.8594,52.3438 L875.7031,57.4219 L878.0313,57.4219 L876.8594,52.3438 Z M875.375,50.1094 L878.3594,50.1094 L881.7188,62.5 L879.2656,62.5 L878.5,59.4375 L875.2188,59.4375 L874.4688,62.5 L872.0313,62.5 L875.375,50.1094 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="36" x="897.25" y="61.1543">Entity</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="798" x2="1000" y1="73" y2="73" />
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="805" y="81" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="70" x="817" y="87.2104">pos : QPoint</text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="805" y="93.8047" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="102" x="817" y="100.0151">orientation : qreal</text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="805" y="106.6094" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="118" x="817" y="112.8198">boundingBox : QRect</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="798" x2="1000" y1="119.4141" y2="119.4141" />
+        <ellipse cx="808" cy="130.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="139" x="817" y="133.6245">draw(p : QPainter) : void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="821" y="146.4292" />
+        <ellipse cx="808" cy="156.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="176" x="817" y="159.2339">setPosition(pos : QPoint) : void</text>
+        <ellipse cx="808" cy="168.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="178" x="817" y="172.0386">setPosition(x : int, y : int) : void</text>
+        <ellipse cx="808" cy="181.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="172" x="817" y="184.8433">setOrientation(a : qreal) : void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="821" y="197.6479" />
+        <ellipse cx="808" cy="207.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="817" y="210.4526">getBoundingBox() : QRect</text>
+        <ellipse cx="808" cy="220.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="817" y="223.2573">getPosition() : QPoint</text>
+        <ellipse cx="808" cy="232.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="817" y="236.062">getOrientation() : qreal</text>
+        <!--MD5=[0d9486d0e98fbdb275b332ad7d96e237]
+class statE-->
+        <rect codeLine="35" fill="#D3D3D3" height="99.2188" id="statE" style="stroke:#000000;stroke-width:1.5;" width="172" x="839" y="310.5" />
+        <ellipse cx="884.75" cy="326.5" fill="#A9DCDF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M884.8594,321.8438 L883.7031,326.9219 L886.0313,326.9219 L884.8594,321.8438 Z M883.375,319.6094 L886.3594,319.6094 L889.7188,332 L887.2656,332 L886.5,328.9375 L883.2188,328.9375 L882.4688,332 L880.0313,332 L883.375,319.6094 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="72" x="905.25" y="330.6543">StaticEntity</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="840" x2="1010" y1="342.5" y2="342.5" />
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="847" y="350.5" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="859" y="356.7104">isTransparent : boolean</text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="847" y="363.3047" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="859" y="369.5151">isNoiseMuffler : boolean</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="840" x2="1010" y1="376.1094" y2="376.1094" />
+        <ellipse cx="850" cy="387.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="859" y="390.3198">isTransparent() : boolean</text>
+        <ellipse cx="850" cy="399.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="859" y="403.1245">isNoiseMuffler() : boolean</text>
+        <!--MD5=[3e05f9b7024bcc6985706240889bf995]
+class dynE-->
+        <rect codeLine="43" fill="#D3D3D3" height="112.0234" id="dynE" style="stroke:#000000;stroke-width:1.5;" width="225" x="578.5" y="304" />
+        <ellipse cx="642.25" cy="320" fill="#A9DCDF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M642.3594,315.3438 L641.2031,320.4219 L643.5313,320.4219 L642.3594,315.3438 Z M640.875,313.1094 L643.8594,313.1094 L647.2188,325.5 L644.7656,325.5 L644,322.4375 L640.7188,322.4375 L639.9688,325.5 L637.5313,325.5 L640.875,313.1094 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="89" x="662.75" y="324.1543">DynamicEntity</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="579.5" x2="802.5" y1="336" y2="336" />
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="586.5" y="344" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="76" x="598.5" y="350.2104">speed : qreal</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="579.5" x2="802.5" y1="356.8047" y2="356.8047" />
+        <ellipse cx="589.5" cy="367.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="598.5" y="371.0151">updatePos(delta_t : qreal) : void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="602.5" y="383.8198" />
+        <ellipse cx="589.5" cy="393.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="181" x="598.5" y="396.6245">setSpeed(speed : QPoint) : void</text>
+        <ellipse cx="589.5" cy="406.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="199" x="598.5" y="409.4292">setSpeed(x : qreal, y : qreal) : void</text>
+        <!--MD5=[cc2b04618cdad4bf452cd1ee57792b41]
+class sprite-->
+        <rect codeLine="52" fill="#D3D3D3" height="60.8047" id="sprite" style="stroke:#000000;stroke-width:1.5;" width="123" x="629.5" y="111.5" />
+        <ellipse cx="668.8" cy="127.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M671.7688,133.1406 Q671.1906,133.4375 670.55,133.5781 Q669.9094,133.7344 669.2063,133.7344 Q666.7063,133.7344 665.3781,132.0938 Q664.0656,130.4375 664.0656,127.3125 Q664.0656,124.1875 665.3781,122.5313 Q666.7063,120.875 669.2063,120.875 Q669.9094,120.875 670.55,121.0313 Q671.2063,121.1875 671.7688,121.4844 L671.7688,124.2031 Q671.1438,123.625 670.55,123.3594 Q669.9563,123.0781 669.3313,123.0781 Q667.9875,123.0781 667.3,124.1563 Q666.6125,125.2188 666.6125,127.3125 Q666.6125,129.4063 667.3,130.4844 Q667.9875,131.5469 669.3313,131.5469 Q669.9563,131.5469 670.55,131.2813 Q671.1438,131 671.7688,130.4219 L671.7688,133.1406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="37" x="688.2" y="131.6543">Sprite</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="630.5" x2="751.5" y1="143.5" y2="143.5" />
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="637.5" y="151.5" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="649.5" y="157.7104">image : QPixmap</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="630.5" x2="751.5" y1="164.3047" y2="164.3047" />
+        <!--MD5=[03b8f314670f436ff8b02b859e0ae25a]
+class viewer-->
+        <rect codeLine="56" fill="#D3D3D3" height="48" id="viewer" style="stroke:#000000;stroke-width:1.5;" width="74" x="879" y="586" />
+        <ellipse cx="894" cy="602" fill="#A9DCDF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M894.1094,597.3438 L892.9531,602.4219 L895.2813,602.4219 L894.1094,597.3438 Z M892.625,595.1094 L895.6094,595.1094 L898.9688,607.5 L896.5156,607.5 L895.75,604.4375 L892.4688,604.4375 L891.7188,607.5 L889.2813,607.5 L892.625,595.1094 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="908" y="606.1543">Viewer</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="880" x2="952" y1="618" y2="618" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="880" x2="952" y1="626" y2="626" />
+        <!--MD5=[d095832e7011aebf16be8b185990917e]
+class glass-->
+        <rect codeLine="58" fill="#D3D3D3" height="48" id="glass" style="stroke:#000000;stroke-width:1.5;" width="66" x="945" y="477" />
+        <ellipse cx="960" cy="493" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M962.9688,498.6406 Q962.3906,498.9375 961.75,499.0781 Q961.1094,499.2344 960.4063,499.2344 Q957.9063,499.2344 956.5781,497.5938 Q955.2656,495.9375 955.2656,492.8125 Q955.2656,489.6875 956.5781,488.0313 Q957.9063,486.375 960.4063,486.375 Q961.1094,486.375 961.75,486.5313 Q962.4063,486.6875 962.9688,486.9844 L962.9688,489.7031 Q962.3438,489.125 961.75,488.8594 Q961.1563,488.5781 960.5313,488.5781 Q959.1875,488.5781 958.5,489.6563 Q957.8125,490.7188 957.8125,492.8125 Q957.8125,494.9063 958.5,495.9844 Q959.1875,497.0469 960.5313,497.0469 Q961.1563,497.0469 961.75,496.7813 Q962.3438,496.5 962.9688,495.9219 L962.9688,498.6406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="34" x="974" y="497.1543">Glass</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="946" x2="1010" y1="509" y2="509" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="946" x2="1010" y1="517" y2="517" />
+        <!--MD5=[5a3d999db1fbe9a1816e4ddb607c3c34]
+class wall-->
+        <rect codeLine="62" fill="#D3D3D3" height="48" id="wall" style="stroke:#000000;stroke-width:1.5;" width="57" x="737.5" y="477" />
+        <ellipse cx="752.5" cy="493" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M755.4688,498.6406 Q754.8906,498.9375 754.25,499.0781 Q753.6094,499.2344 752.9063,499.2344 Q750.4063,499.2344 749.0781,497.5938 Q747.7656,495.9375 747.7656,492.8125 Q747.7656,489.6875 749.0781,488.0313 Q750.4063,486.375 752.9063,486.375 Q753.6094,486.375 754.25,486.5313 Q754.9063,486.6875 755.4688,486.9844 L755.4688,489.7031 Q754.8438,489.125 754.25,488.8594 Q753.6563,488.5781 753.0313,488.5781 Q751.6875,488.5781 751,489.6563 Q750.3125,490.7188 750.3125,492.8125 Q750.3125,494.9063 751,495.9844 Q751.6875,497.0469 753.0313,497.0469 Q753.6563,497.0469 754.25,496.7813 Q754.8438,496.5 755.4688,495.9219 L755.4688,498.6406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="25" x="766.5" y="497.1543">Wall</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="738.5" x2="793.5" y1="509" y2="509" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="738.5" x2="793.5" y1="517" y2="517" />
+        <!--MD5=[6ed428f380fba1fe169d41e4a7e705be]
+class cam-->
+        <rect codeLine="66" fill="#D3D3D3" height="48" id="cam" style="stroke:#000000;stroke-width:1.5;" width="80" x="830" y="477" />
+        <ellipse cx="845" cy="493" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M847.9688,498.6406 Q847.3906,498.9375 846.75,499.0781 Q846.1094,499.2344 845.4063,499.2344 Q842.9063,499.2344 841.5781,497.5938 Q840.2656,495.9375 840.2656,492.8125 Q840.2656,489.6875 841.5781,488.0313 Q842.9063,486.375 845.4063,486.375 Q846.1094,486.375 846.75,486.5313 Q847.4063,486.6875 847.9688,486.9844 L847.9688,489.7031 Q847.3438,489.125 846.75,488.8594 Q846.1563,488.5781 845.5313,488.5781 Q844.1875,488.5781 843.5,489.6563 Q842.8125,490.7188 842.8125,492.8125 Q842.8125,494.9063 843.5,495.9844 Q844.1875,497.0469 845.5313,497.0469 Q846.1563,497.0469 846.75,496.7813 Q847.3438,496.5 847.9688,495.9219 L847.9688,498.6406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="48" x="859" y="497.1543">Camera</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="831" x2="909" y1="509" y2="509" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="831" x2="909" y1="517" y2="517" />
+        <!--MD5=[6f87453c14bee8fa3e6952c3a8a331f1]
+class charac-->
+        <rect codeLine="68" fill="#D3D3D3" height="48" id="charac" style="stroke:#000000;stroke-width:1.5;" width="94" x="608" y="477" />
+        <ellipse cx="623" cy="493" fill="#A9DCDF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M623.1094,488.3438 L621.9531,493.4219 L624.2813,493.4219 L623.1094,488.3438 Z M621.625,486.1094 L624.6094,486.1094 L627.9688,498.5 L625.5156,498.5 L624.75,495.4375 L621.4688,495.4375 L620.7188,498.5 L618.2813,498.5 L621.625,486.1094 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="62" x="637" y="497.1543">Character</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="609" x2="701" y1="509" y2="509" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="609" x2="701" y1="517" y2="517" />
+        <!--MD5=[c48f5c3425ec2ca0ff9821f72dfef99f]
+class guard-->
+        <rect codeLine="70" fill="#D3D3D3" height="48" id="guard" style="stroke:#000000;stroke-width:1.5;" width="70" x="578" y="586" />
+        <ellipse cx="593" cy="602" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M595.9688,607.6406 Q595.3906,607.9375 594.75,608.0781 Q594.1094,608.2344 593.4063,608.2344 Q590.9063,608.2344 589.5781,606.5938 Q588.2656,604.9375 588.2656,601.8125 Q588.2656,598.6875 589.5781,597.0313 Q590.9063,595.375 593.4063,595.375 Q594.1094,595.375 594.75,595.5313 Q595.4063,595.6875 595.9688,595.9844 L595.9688,598.7031 Q595.3438,598.125 594.75,597.8594 Q594.1563,597.5781 593.5313,597.5781 Q592.1875,597.5781 591.5,598.6563 Q590.8125,599.7188 590.8125,601.8125 Q590.8125,603.9063 591.5,604.9844 Q592.1875,606.0469 593.5313,606.0469 Q594.1563,606.0469 594.75,605.7813 Q595.3438,605.5 595.9688,604.9219 L595.9688,607.6406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="607" y="606.1543">Guard</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="579" x2="647" y1="618" y2="618" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="579" x2="647" y1="626" y2="626" />
+        <!--MD5=[b7bc7d3b9c7563b2b0881830d0c4aa0f]
+class cop-->
+        <rect codeLine="72" fill="#D3D3D3" height="48" id="cop" style="stroke:#000000;stroke-width:1.5;" width="56" x="683" y="586" />
+        <ellipse cx="698" cy="602" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M700.9688,607.6406 Q700.3906,607.9375 699.75,608.0781 Q699.1094,608.2344 698.4063,608.2344 Q695.9063,608.2344 694.5781,606.5938 Q693.2656,604.9375 693.2656,601.8125 Q693.2656,598.6875 694.5781,597.0313 Q695.9063,595.375 698.4063,595.375 Q699.1094,595.375 699.75,595.5313 Q700.4063,595.6875 700.9688,595.9844 L700.9688,598.7031 Q700.3438,598.125 699.75,597.8594 Q699.1563,597.5781 698.5313,597.5781 Q697.1875,597.5781 696.5,598.6563 Q695.8125,599.7188 695.8125,601.8125 Q695.8125,603.9063 696.5,604.9844 Q697.1875,606.0469 698.5313,606.0469 Q699.1563,606.0469 699.75,605.7813 Q700.3438,605.5 700.9688,604.9219 L700.9688,607.6406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="24" x="712" y="606.1543">Cop</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="684" x2="738" y1="618" y2="618" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="684" x2="738" y1="626" y2="626" />
+        <!--MD5=[308de564e57c8d51c168255b0b03c096]
+class player-->
+        <rect codeLine="74" fill="#D3D3D3" height="48" id="player" style="stroke:#000000;stroke-width:1.5;" width="70" x="774" y="586" />
+        <ellipse cx="789" cy="602" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M791.9688,607.6406 Q791.3906,607.9375 790.75,608.0781 Q790.1094,608.2344 789.4063,608.2344 Q786.9063,608.2344 785.5781,606.5938 Q784.2656,604.9375 784.2656,601.8125 Q784.2656,598.6875 785.5781,597.0313 Q786.9063,595.375 789.4063,595.375 Q790.1094,595.375 790.75,595.5313 Q791.4063,595.6875 791.9688,595.9844 L791.9688,598.7031 Q791.3438,598.125 790.75,597.8594 Q790.1563,597.5781 789.5313,597.5781 Q788.1875,597.5781 787.5,598.6563 Q786.8125,599.7188 786.8125,601.8125 Q786.8125,603.9063 787.5,604.9844 Q788.1875,606.0469 789.5313,606.0469 Q790.1563,606.0469 790.75,605.7813 Q791.3438,605.5 791.9688,604.9219 L791.9688,607.6406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="803" y="606.1543">Player</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="775" x2="843" y1="618" y2="618" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="775" x2="843" y1="626" y2="626" />
+        <!--MD5=[2c5ac2587fcd9a12b57039731f113c24]
+class scene-->
+        <rect codeLine="95" fill="#D3D3D3" height="86.4141" id="scene" style="stroke:#000000;stroke-width:1.5;" width="197" x="37.5" y="99" />
+        <ellipse cx="112.25" cy="115" fill="#A9DCDF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M112.3594,110.3438 L111.2031,115.4219 L113.5313,115.4219 L112.3594,110.3438 Z M110.875,108.1094 L113.8594,108.1094 L117.2188,120.5 L114.7656,120.5 L114,117.4375 L110.7188,117.4375 L109.9688,120.5 L107.5313,120.5 L110.875,108.1094 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="39" x="132.75" y="119.1543">Scene</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="38.5" x2="233.5" y1="131" y2="131" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="38.5" x2="233.5" y1="139" y2="139" />
+        <ellipse cx="48.5" cy="150" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="91" x="57.5" y="153.2104">changed() : void</text>
+        <ellipse cx="48.5" cy="162.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="171" x="57.5" y="166.0151">subscribe(o : Observer) : void</text>
+        <ellipse cx="48.5" cy="175.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="139" x="57.5" y="178.8198">draw(p : QPainter) : void</text>
+        <!--MD5=[f0268dd29ee89052933f031546cb1cab]
+class Menu-->
+        <rect codeLine="101" fill="#D3D3D3" height="48" id="Menu" style="stroke:#000000;stroke-width:1.5;" width="66" x="32" y="336" />
+        <ellipse cx="47" cy="352" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M49.9688,357.6406 Q49.3906,357.9375 48.75,358.0781 Q48.1094,358.2344 47.4063,358.2344 Q44.9063,358.2344 43.5781,356.5938 Q42.2656,354.9375 42.2656,351.8125 Q42.2656,348.6875 43.5781,347.0313 Q44.9063,345.375 47.4063,345.375 Q48.1094,345.375 48.75,345.5313 Q49.4063,345.6875 49.9688,345.9844 L49.9688,348.7031 Q49.3438,348.125 48.75,347.8594 Q48.1563,347.5781 47.5313,347.5781 Q46.1875,347.5781 45.5,348.6563 Q44.8125,349.7188 44.8125,351.8125 Q44.8125,353.9063 45.5,354.9844 Q46.1875,356.0469 47.5313,356.0469 Q48.1563,356.0469 48.75,355.7813 Q49.3438,355.5 49.9688,354.9219 L49.9688,357.6406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="34" x="61" y="356.1543">Menu</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="33" x2="97" y1="368" y2="368" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="33" x2="97" y1="376" y2="376" />
+        <!--MD5=[a0370af3af91f3cde3268828bb1614d1]
+class GameScene-->
+        <rect codeLine="105" fill="#D3D3D3" height="48" id="GameScene" style="stroke:#000000;stroke-width:1.5;" width="107" x="133.5" y="336" />
+        <ellipse cx="148.5" cy="352" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M151.4688,357.6406 Q150.8906,357.9375 150.25,358.0781 Q149.6094,358.2344 148.9063,358.2344 Q146.4063,358.2344 145.0781,356.5938 Q143.7656,354.9375 143.7656,351.8125 Q143.7656,348.6875 145.0781,347.0313 Q146.4063,345.375 148.9063,345.375 Q149.6094,345.375 150.25,345.5313 Q150.9063,345.6875 151.4688,345.9844 L151.4688,348.7031 Q150.8438,348.125 150.25,347.8594 Q149.6563,347.5781 149.0313,347.5781 Q147.6875,347.5781 147,348.6563 Q146.3125,349.7188 146.3125,351.8125 Q146.3125,353.9063 147,354.9844 Q147.6875,356.0469 149.0313,356.0469 Q149.6563,356.0469 150.25,355.7813 Q150.8438,355.5 151.4688,354.9219 L151.4688,357.6406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="75" x="162.5" y="356.1543">GameScene</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="134.5" x2="239.5" y1="368" y2="368" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="134.5" x2="239.5" y1="376" y2="376" />
+        <!--MD5=[8ab7eb4cd4e39d2a6a19fed9f9b9e14d]
+class obs-->
+        <rect codeLine="114" fill="#D3D3D3" height="86.4141" id="obs" style="stroke:#000000;stroke-width:1.5;" width="176" x="346" y="99" />
+        <ellipse cx="402.75" cy="115" fill="#A9DCDF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M402.8594,110.3438 L401.7031,115.4219 L404.0313,115.4219 L402.8594,110.3438 Z M401.375,108.1094 L404.3594,108.1094 L407.7188,120.5 L405.2656,120.5 L404.5,117.4375 L401.2188,117.4375 L400.4688,120.5 L398.0313,120.5 L401.375,108.1094 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="54" x="423.25" y="119.1543">Observer</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="347" x2="521" y1="131" y2="131" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="347" x2="521" y1="139" y2="139" />
+        <ellipse cx="357" cy="150" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="366" y="153.2104">refresh() : void</text>
+        <ellipse cx="357" cy="162.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="68" x="366" y="166.0151">stop() : void</text>
+        <ellipse cx="357" cy="175.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="150" x="366" y="178.8198">setScene(s : Scene) : void</text>
+        <!--MD5=[27ac13977b9b3be7151469be284e7ab6]
+class gameW-->
+        <rect codeLine="120" fill="#D3D3D3" height="53.9375" id="gameW" style="stroke:#000000;stroke-width:1.5;" width="128" x="370" y="333" />
+        <ellipse cx="385" cy="351.9688" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M387.9688,357.6094 Q387.3906,357.9063 386.75,358.0469 Q386.1094,358.2031 385.4063,358.2031 Q382.9063,358.2031 381.5781,356.5625 Q380.2656,354.9063 380.2656,351.7813 Q380.2656,348.6563 381.5781,347 Q382.9063,345.3438 385.4063,345.3438 Q386.1094,345.3438 386.75,345.5 Q387.4063,345.6563 387.9688,345.9531 L387.9688,348.6719 Q387.3438,348.0938 386.75,347.8281 Q386.1563,347.5469 385.5313,347.5469 Q384.1875,347.5469 383.5,348.625 Q382.8125,349.6875 382.8125,351.7813 Q382.8125,353.875 383.5,354.9531 Q384.1875,356.0156 385.5313,356.0156 Q386.1563,356.0156 386.75,355.75 Q387.3438,355.4688 387.9688,354.8906 L387.9688,357.6094 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="100" x="397" y="349.1387">«QMainWindow»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="83" x="405.5" y="363.1074">GameWindow</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="371" x2="497" y1="370.9375" y2="370.9375" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="371" x2="497" y1="378.9375" y2="378.9375" />
+        <!--MD5=[b9b365a0b3077fe18451b5baea905989]
+class PhysicLogic-->
+        <rect codeLine="131" fill="#D3D3D3" height="48" id="PhysicLogic" style="stroke:#000000;stroke-width:1.5;" width="103" x="1067.5" y="118" />
+        <ellipse cx="1082.5" cy="134" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" />
+        <path d="M1085.4688,139.6406 Q1084.8906,139.9375 1084.25,140.0781 Q1083.6094,140.2344 1082.9063,140.2344 Q1080.4063,140.2344 1079.0781,138.5938 Q1077.7656,136.9375 1077.7656,133.8125 Q1077.7656,130.6875 1079.0781,129.0313 Q1080.4063,127.375 1082.9063,127.375 Q1083.6094,127.375 1084.25,127.5313 Q1084.9063,127.6875 1085.4688,127.9844 L1085.4688,130.7031 Q1084.8438,130.125 1084.25,129.8594 Q1083.6563,129.5781 1083.0313,129.5781 Q1081.6875,129.5781 1081,130.6563 Q1080.3125,131.7188 1080.3125,133.8125 Q1080.3125,135.9063 1081,136.9844 Q1081.6875,138.0469 1083.0313,138.0469 Q1083.6563,138.0469 1084.25,137.7813 Q1084.8438,137.5 1085.4688,136.9219 L1085.4688,139.6406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="71" x="1096.5" y="138.1543">PhysicLogic</text>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="1068.5" x2="1169.5" y1="150" y2="150" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="1068.5" x2="1169.5" y1="158" y2="158" />
+        <!--MD5=[a1d0e1f76907ac767023a94b128e18cc]
+reverse link sprite to dynE-->
+        <path codeLine="76" d="M691,177.87 C691,211.82 691,263.95 691,303.58 " fill="none" id="sprite-backto-dynE" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="691,172.58,687,181.58,691,177.58,695,181.58,691,172.58" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[67ffc61849af5d996e10406248b16768]
+reverse link entity to statE-->
+        <path codeLine="77" d="M913.46,263.13 C915.47,279.8 917.43,296.08 919.14,310.35 " fill="none" id="entity-backto-statE" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="906.49,263.79,911.05,243.1,920.39,262.12,906.49,263.79" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[c1eb6c6d8e5c289cfbeedb5a039a43d8]
+reverse link entity to dynE-->
+        <path codeLine="78" d="M788.47,257.79 C773.08,273.76 757.88,289.54 744.23,303.72 " fill="none" id="entity-backto-dynE" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="783.7,252.65,802.61,243.1,793.78,262.36,783.7,252.65" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[21234b7b864fa15ca974f0e15cefd1ba]
+reverse link statE to glass-->
+        <path codeLine="80" d="M950.67,428.33 C957.34,445.83 964.09,463.51 969.21,476.94 " fill="none" id="statE-backto-glass" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="944.12,430.8,943.54,409.62,957.2,425.81,944.12,430.8" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[0da46cba03272225be102cb303113d8f]
+reverse link statE to wall-->
+        <path codeLine="81" d="M854.05,423.03 C832.11,442.21 809.29,462.16 792.38,476.94 " fill="none" id="statE-backto-wall" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="849.72,417.51,869.39,409.62,858.94,428.05,849.72,417.51" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[8eb953beaab7c53f04392e7dff0a7430]
+reverse link statE to cam-->
+        <path codeLine="82" d="M898.36,428.33 C891.43,445.83 884.44,463.51 879.12,476.94 " fill="none" id="statE-backto-cam" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="891.9,425.64,905.76,409.62,904.91,430.79,891.9,425.64" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[6b1d7d2465dd54ffdb037e320da3fbeb]
+reverse link dynE to charac-->
+        <path codeLine="84" d="M671.62,435.85 C667.76,450.72 664,465.27 661.03,476.74 " fill="none" id="dynE-backto-charac" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="664.88,433.94,676.67,416.34,678.43,437.45,664.88,433.94" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[181e1947e811969cb3b7d8e37f6a8217]
+reverse link charac to guard-->
+        <path codeLine="86" d="M638.47,544.1 C632.9,558.31 626.88,573.64 622.1,585.83 " fill="none" id="charac-backto-guard" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="632.06,541.28,645.89,525.22,645.09,546.39,632.06,541.28" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[f023822077cc6077a8a048fad7a3a271]
+reverse link charac to cop-->
+        <path codeLine="87" d="M676.52,543.13 C684.1,557.6 692.35,573.36 698.87,585.83 " fill="none" id="charac-backto-cop" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="670.22,546.18,667.15,525.22,682.63,539.69,670.22,546.18" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[df1337f7be1799411da0d4ed544cb07f]
+reverse link charac to player-->
+        <path codeLine="88" d="M704.86,536.64 C728.04,552.75 754.98,571.47 775.65,585.83 " fill="none" id="charac-backto-player" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="700.85,542.38,688.42,525.22,708.83,530.88,700.85,542.38" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[9cc6d59f99f290d76763e77504887185]
+link charac to viewer-->
+        <path codeLine="90" d="M702.37,520.95 C740.69,536.35 796.48,558.88 860.21,585.33 " fill="none" id="charac-to-viewer" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="863.07,578.94,878.85,593.08,857.7,591.86,863.07,578.94" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[6e824e2d2d23bf925724e2a907024810]
+link cam to viewer-->
+        <path codeLine="91" d="M879.98,525.22 C885.29,537.56 891.97,553.1 898.13,567.44 " fill="none" id="cam-to-viewer" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="904.57,564.69,906.04,585.83,891.71,570.22,904.57,564.69" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[c07b97ba089c9db0aca4b9ed7c5ba2bc]
+reverse link scene to Menu-->
+        <path codeLine="109" d="M115.86,204.28 C101.43,248.16 82.83,304.77 72.59,335.91 " fill="none" id="scene-backto-Menu" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="109.25,201.97,122.14,185.16,122.55,206.35,109.25,201.97" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[59d72c63bd65780e5c3e19a862a64ce6]
+reverse link scene to GameScene-->
+        <path codeLine="110" d="M150.61,204.88 C160.95,248.67 174.23,304.91 181.55,335.91 " fill="none" id="scene-backto-GameScene" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="143.74,206.23,145.95,185.16,157.36,203.02,143.74,206.23" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[bfc2b6e0ead7daa853657a34bcd4815d]
+reverse link obs to gameW-->
+        <path codeLine="124" d="M434,205.18 C434,247.54 434,301.45 434,332.9 " fill="none" id="obs-backto-gameW" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;" />
+        <polygon fill="none" points="427,205.16,434,185.16,441,205.16,427,205.16" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[6689bd6fa286452382a771b6b9613379]
+link scene to obs-->
+        <path codeLine="127" d="M246.82,142 C246.82,142 305.53,142 332.8,142 " fill="none" id="scene-obs" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="345.98,142,336.98,138,340.98,142,336.98,146,345.98,142" style="stroke:#000000;stroke-width:1.0;" />
+        <line style="stroke:#000000;stroke-width:1.0;" x1="340.98" x2="332.98" y1="142" y2="142" />
+        <polygon fill="#FFFFFF" points="234.82,142,240.82,146,246.82,142,240.82,138,234.82,142" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="none" points="257.75,126.0664,261.75,130.0664,257.75,134.0664,253.75,130.0664" style="stroke:#B38D22;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="264.75" y="135.0669">observers</text>
+        <!--MD5=[4f4b86988f77112c45b269d05fda0b7e]
+link obs to scene-->
+        <path codeLine="128" d="M333.98,142 C333.98,142 275.87,142 248.04,142 " fill="none" id="obs-scene" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="234.82,142,243.82,146,239.82,142,243.82,138,234.82,142" style="stroke:#000000;stroke-width:1.0;" />
+        <line style="stroke:#000000;stroke-width:1.0;" x1="239.82" x2="247.82" y1="142" y2="142" />
+        <polygon fill="#FFFFFF" points="345.98,142,339.98,138,333.98,142,339.98,146,345.98,142" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="none" points="258.75,126.0664,262.75,130.0664,258.75,134.0664,254.75,130.0664" style="stroke:#B38D22;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="265.75" y="135.0669">theScene</text>
+        <!--MD5=[3883d8d6514de42fd66264f1dbbde453]
+@startuml dillinger_classes
+
+skinparam shadowing false
+'skinparam linetype polyline
+'skinparam linetype ortho
+
+skinparam class {
+    ArrowColor black
+    BorderColor black
+    BackGroundColor lightgrey
+}
+
+skinparam package {
+    ArrowColor black
+    BorderColor black
+    BackGroundColor white
+}
+
+package GameObjects {
+    abstract "Entity" as entity {
+        -pos : QPoint
+        -orientation : qreal
+        -boundingBox : QRect
+
+        +draw(p : QPainter) : void
+
+        +setPosition(pos : QPoint) : void
+        +setPosition(x : int, y : int) : void
+        +setOrientation(a : qreal) : void
+
+        +getBoundingBox() : QRect
+        +getPosition() : QPoint
+        +getOrientation() : qreal
+    }
+
+    abstract "StaticEntity" as statE {
+        -isTransparent : boolean
+        -isNoiseMuffler : boolean
+
+        +isTransparent() : boolean
+        +isNoiseMuffler() : boolean
+    }
+
+    abstract "DynamicEntity" as dynE {
+        -speed : qreal
+
+        +updatePos(delta_t : qreal) : void
+
+        +setSpeed(speed : QPoint) : void
+        +setSpeed(x : qreal, y : qreal) : void
+    }
+
+    class "Sprite" as sprite {
+        -image : QPixmap
+    }
+
+    abstract "Viewer" as viewer
+
+    class "Glass" as glass {
+
+    }
+
+    class "Wall" as wall {
+
+    }
+
+    class "Camera" as cam
+
+    abstract "Character" as charac
+
+    class "Guard" as guard
+
+    class "Cop" as cop
+
+    class "Player" as player
+
+    dynE -up-> sprite
+    statE .up.|> entity
+    dynE .up.|> entity
+
+    glass .up.|> statE
+    wall .up.|> statE
+    cam .up.|> statE
+
+    charac .up.|> dynE
+
+    guard .up.|> charac
+    cop .up.|> charac
+    player .up.|> charac
+
+    charac .down.|> viewer
+    cam .down.|> viewer
+}
+
+package Scenes {
+    abstract "Scene" as scene{
+        +changed() : void
+        +subscribe(o : Observer) : void
+        +draw(p : QPainter) : void
+    }
+
+    class Menu {
+
+    }
+
+    class GameScene {
+
+    }
+
+    Menu .up.|> scene
+    GameScene .up.|> scene
+}
+
+package Views {
+    abstract "Observer" as obs {
+        +refresh() : void
+        +stop() : void
+        +setScene(s : Scene) : void
+    }
+
+    class "GameWindow" as gameW  <<QMainWindow>>{
+
+    }
+
+    gameW .up.|> obs
+}
+
+scene o-> obs : "#observers"
+obs o-> scene : "#theScene"
+
+package GameLogic {
+    class PhysicLogic {
+
+    }
+}
+
+@enduml
+
+@startuml dillinger_classes
+
+skinparam shadowing false
+
+skinparam class {
+    ArrowColor black
+    BorderColor black
+    BackGroundColor lightgrey
+}
+
+skinparam package {
+    ArrowColor black
+    BorderColor black
+    BackGroundColor white
+}
+
+package GameObjects {
+    abstract "Entity" as entity {
+        -pos : QPoint
+        -orientation : qreal
+        -boundingBox : QRect
+
+        +draw(p : QPainter) : void
+
+        +setPosition(pos : QPoint) : void
+        +setPosition(x : int, y : int) : void
+        +setOrientation(a : qreal) : void
+
+        +getBoundingBox() : QRect
+        +getPosition() : QPoint
+        +getOrientation() : qreal
+    }
+
+    abstract "StaticEntity" as statE {
+        -isTransparent : boolean
+        -isNoiseMuffler : boolean
+
+        +isTransparent() : boolean
+        +isNoiseMuffler() : boolean
+    }
+
+    abstract "DynamicEntity" as dynE {
+        -speed : qreal
+
+        +updatePos(delta_t : qreal) : void
+
+        +setSpeed(speed : QPoint) : void
+        +setSpeed(x : qreal, y : qreal) : void
+    }
+
+    class "Sprite" as sprite {
+        -image : QPixmap
+    }
+
+    abstract "Viewer" as viewer
+
+    class "Glass" as glass {
+
+    }
+
+    class "Wall" as wall {
+
+    }
+
+    class "Camera" as cam
+
+    abstract "Character" as charac
+
+    class "Guard" as guard
+
+    class "Cop" as cop
+
+    class "Player" as player
+
+    dynE -up-> sprite
+    statE .up.|> entity
+    dynE .up.|> entity
+
+    glass .up.|> statE
+    wall .up.|> statE
+    cam .up.|> statE
+
+    charac .up.|> dynE
+
+    guard .up.|> charac
+    cop .up.|> charac
+    player .up.|> charac
+
+    charac .down.|> viewer
+    cam .down.|> viewer
+}
+
+package Scenes {
+    abstract "Scene" as scene{
+        +changed() : void
+        +subscribe(o : Observer) : void
+        +draw(p : QPainter) : void
+    }
+
+    class Menu {
+
+    }
+
+    class GameScene {
+
+    }
+
+    Menu .up.|> scene
+    GameScene .up.|> scene
+}
+
+package Views {
+    abstract "Observer" as obs {
+        +refresh() : void
+        +stop() : void
+        +setScene(s : Scene) : void
+    }
+
+    class "GameWindow" as gameW  <<QMainWindow>>{
+
+    }
+
+    gameW .up.|> obs
+}
+
+scene o-> obs : "#observers"
+obs o-> scene : "#theScene"
+
+package GameLogic {
+    class PhysicLogic {
+
+    }
+}
+
+@enduml
+
+PlantUML version 1.2021.4(Sun Apr 04 10:49:39 CEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: fr
+Country: CH
+-->
+    </g>
+</svg>

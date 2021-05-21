@@ -2,7 +2,7 @@
 #define GAMESCENE_H
 
 #include "scene.h"
-#include "entity.h"
+#include "gameObjects/entity.h"
 
 class GameScene : public Scene
 {

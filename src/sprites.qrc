@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>sprites/cloud.png</file>
+        <file>sprites/snoopyAction.png</file>
+        <file>sprites/snoopyL.png</file>
+        <file>sprites/snoopyR.png</file>
+    </qresource>
+</RCC>

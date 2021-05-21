@@ -16,53 +16,54 @@ skinparam package {
     BackGroundColor white
 }
 
-package GameObjects {
+package gameObjects {
+
     abstract "Entity" as entity {
-        -pos : QPoint
-        -orientation : qreal
-        -boundingBox : QRect
+        -boundingBox : QRectF
+        -angle : qreal
+
+        #sprites : QPixmap
+        #selectSprite : QPixmap
 
         +draw(p : QPainter) : void
 
-        +setPosition(pos : QPoint) : void
-        +setPosition(x : integer, y : integer) : void
-        +setOrientation(a : qreal) : void
+        +setPosition(pos : QPointF) : void
+        +setPosition(x : qreal, y : qreal) : void
+        +setAngle(angle : orientation) : void
 
-        +getBoundingBox() : QRect
-        +getPosition() : QPoint
-        +getOrientation() : qreal
+        +getBoundingBox() : QRectF
+        +getPosition() : QPointF
+        +getAngle() : orientation
     }
 
-    abstract "StaticEntity" as statE {
-        -isTransparent : boolean
-        -isNoiseMuffler : boolean
+    together {
+        abstract "StaticEntity" as statE {
+            -isTransparent : boolean
+            -isNoiseMuffler : boolean
+            -isTangible : boolean
 
-        +isTransparent() : boolean
-        +isNoiseMuffler() : boolean
+            +isTransparent() : boolean
+            +isNoiseMuffler() : boolean
+            +isTangible() : boolean
+        }
+
+        abstract "DynamicEntity" as dynE {
+            -speed : QPointF
+
+            +setSpeed(speed : QPointF) : void
+            +setSpeed(x : qreal, y : qreal) : void
+
+            +getSpeed() : QPointF
+        }
+
+        abstract "Viewer" as viewer
+
+        abstract "Listener" as listener
     }
 
-    abstract "DynamicEntity" as dynE {
-        -speed : qreal
+    class "Glass" as glass
 
-        +updatePos(delta_t : qreal) : void
-
-        +setSpeed(speed : QPoint) : void
-        +setSpeed(x : qreal, y : qreal) : void
-    }
-
-    class "Sprite" as sprite {
-        -image : QPixmap
-    }
-
-    abstract "Viewer" as viewer
-
-    class "Glass" as glass {
-
-    }
-
-    class "Wall" as wall {
-
-    }
+    class "Wall" as wall
 
     class "Camera" as cam
 
@@ -74,25 +75,25 @@ package GameObjects {
 
     class "Player" as player
 
-    dynE -up-> sprite
-    statE .up.|> entity
-    dynE .up.|> entity
+    statE ..|> entity
+    dynE ..|> entity
 
-    glass .up.|> statE
-    wall .up.|> statE
-    cam .up.|> statE
+    glass ..|> statE
+    wall ..|> statE
+    cam ..|> statE
 
-    charac .up.|> dynE
+    charac ..|> dynE
 
-    guard .up.|> charac
-    cop .up.|> charac
-    player .up.|> charac
+    guard ..|> charac
+    cop ..|> charac
+    player ..|> charac
 
-    charac .down.|> viewer
-    cam .down.|> viewer
+    charac ..|> viewer
+    charac ..|> listener
+    cam ..|> viewer
 }
 
-package Scenes {
+package scenes {
     abstract "Scene" as scene{
         +changed() : void
         +subscribe(o : Observer) : void
@@ -111,7 +112,7 @@ package Scenes {
     GameScene .up.|> scene
 }
 
-package Views {
+package views {
     abstract "Observer" as obs {
         +refresh() : void
         +stop() : void
@@ -129,7 +130,7 @@ scene o-> obs : "#observers"
 obs o-> scene : "#theScene"
 
 package GameLogic {
-    class PhysicLogic {
+    class PhysicsEngine {
 
     }
 }

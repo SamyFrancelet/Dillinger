@@ -1,6 +1,6 @@
-#include "gamewindow.h"
-#include "gamescene.h"
-#include "entity.h"
+#include "views/gamewindow.h"
+#include "scenes/gamescene.h"
+#include "gameObjects/entity.h"
 
 #include <QApplication>
 
@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     Entity test;
-    test.setPos(100,100);
+    test.setPos(200, 200);
 
     GameScene s;
     s.addEntity(&test);

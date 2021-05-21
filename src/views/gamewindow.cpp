@@ -1,11 +1,11 @@
 #include "gamewindow.h"
-#include "scene.h"
+#include "scenes/scene.h"
 #include <QPainter>
 
 GameWindow::GameWindow(QWidget *parent)
     : QWidget(parent)
 {
-    this->setFixedSize(800, 800);
+    this->setFixedSize(1280, 900);
 }
 
 GameWindow::~GameWindow()

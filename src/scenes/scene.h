@@ -1,7 +1,7 @@
 #ifndef SCENE_H
 #define SCENE_H
 
-#include "observer.h"
+#include "views/observer.h"
 
 #include <QList>
 #include <QPainter>

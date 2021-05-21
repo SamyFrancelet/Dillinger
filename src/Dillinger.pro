@@ -9,20 +9,27 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    entity.cpp \
-    gamescene.cpp \
+    gameLogic/physicsengine.cpp \
+    gameObjects/dynamicentity.cpp \
     main.cpp \
-    gamewindow.cpp \
-    scene.cpp
+    gameObjects/entity.cpp \
+    scenes/scene.cpp \
+    scenes/gamescene.cpp \
+    views/gamewindow.cpp
 
 HEADERS += \
-    entity.h \
-    gamescene.h \
-    gamewindow.h \
-    observer.h \
-    scene.h
+    gameLogic/physicsengine.h \
+    gameObjects/dynamicentity.h \
+    gameObjects/entity.h \
+    scenes/scene.h \
+    scenes/gamescene.h \
+    views/gamewindow.h \
+    views/observer.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    sprites.qrc
