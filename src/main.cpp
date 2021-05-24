@@ -1,6 +1,7 @@
 #include "views/gamewindow.h"
 #include "scenes/gamescene.h"
 #include "gameObjects/dynamicentity.h"
+#include "gameObjects/wall.h"
 
 #include <QApplication>
 
@@ -8,21 +9,25 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    PhysicsEngine* p = new PhysicsEngine();
+    GameLogic* p = new GameLogic();
 
     GameScene* s = new GameScene();
     p->setScene(s);
 
-    GameWindow* w = new GameWindow();
-    w->setController(p);
-    w->setScene(s);
+    GameWindow* g = new GameWindow();
+    g->setController(p);
+    g->setScene(s);
 
-    w->show();
+    g->show();
 
     DynamicEntity* d = new DynamicEntity();
     s->addEntity(d);
     d->setPos(100,100);
     d->setSpeed(1,1);
+
+    Wall* w = new Wall(10, 100);
+    w->setPos(50,50);
+    s->addEntity(w);
 
     s->changed();
 

@@ -9,8 +9,11 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    gameLogic/physicsengine.cpp \
+    gameLogic/gamelogic.cpp \
+    gameObjects/character.cpp \
     gameObjects/dynamicentity.cpp \
+    gameObjects/staticentity.cpp \
+    gameObjects/wall.cpp \
     main.cpp \
     gameObjects/entity.cpp \
     scenes/scene.cpp \
@@ -18,9 +21,12 @@ SOURCES += \
     views/gamewindow.cpp
 
 HEADERS += \
-    gameLogic/physicsengine.h \
+    gameLogic/gamelogic.h \
+    gameObjects/character.h \
     gameObjects/dynamicentity.h \
     gameObjects/entity.h \
+    gameObjects/staticentity.h \
+    gameObjects/wall.h \
     scenes/scene.h \
     scenes/gamescene.h \
     views/gamewindow.h \

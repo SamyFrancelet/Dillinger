@@ -1,6 +1,7 @@
 #include "dynamicentity.h"
 
-DynamicEntity::DynamicEntity() : Entity(100,100)
+DynamicEntity::DynamicEntity()
+    : Entity(60,70)
 {
     _actualSprite = new QPixmap(":/sprites/snoopyR.png");
     _sprites.append(_actualSprite);

@@ -2,7 +2,7 @@
 #define GAMEWINDOW_H
 
 #include <QWidget>
-#include <gameLogic/physicsengine.h>
+#include "gameLogic/gamelogic.h"
 #include "observer.h"
 
 class GameWindow : public QWidget, public Observer
@@ -13,7 +13,7 @@ public:
     GameWindow(QWidget *parent = nullptr);
     ~GameWindow();
 
-    void setController(PhysicsEngine* c);
+    void setController(GameLogic* c);
 
     // Observer interface
 public:
@@ -24,11 +24,9 @@ public:
 protected:
     void paintEvent(QPaintEvent *event);
 
-    // QWidget interface
-protected:
     void keyPressEvent(QKeyEvent *event);
 
 private:
-    PhysicsEngine* _c;
+    GameLogic* _c;
 };
 #endif // GAMEWINDOW_H

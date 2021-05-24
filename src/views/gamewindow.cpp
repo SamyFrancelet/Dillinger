@@ -1,7 +1,6 @@
 #include "gamewindow.h"
 #include "scenes/scene.h"
 #include <QPainter>
-#include <QDebug>
 
 GameWindow::GameWindow(QWidget *parent)
 {
@@ -12,7 +11,7 @@ GameWindow::~GameWindow()
 {
 }
 
-void GameWindow::setController(PhysicsEngine *c)
+void GameWindow::setController(GameLogic *c)
 {
     _c = c;
 }
@@ -29,14 +28,12 @@ void GameWindow::stop()
 
 void GameWindow::paintEvent(QPaintEvent *event)
 {
-    qDebug() << "Painting";
     QPainter p(this);
     _s->draw(&p);
 }
 
 void GameWindow::keyPressEvent(QKeyEvent *event)
 {
-    qDebug() << "Press";
-    _c->simulate_step();
+    _c->move_step();
 }
 
