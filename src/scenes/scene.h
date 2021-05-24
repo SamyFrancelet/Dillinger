@@ -1,10 +1,10 @@
 #ifndef SCENE_H
 #define SCENE_H
 
-#include "views/observer.h"
-
 #include <QList>
 #include <QPainter>
+
+class Observer;
 
 class Scene
 {

@@ -16,3 +16,8 @@ void GameScene::addEntity(Entity *e)
 {
     entities.append(e);
 }
+
+QList<Entity *> GameScene::getEntities()
+{
+    return entities;
+}

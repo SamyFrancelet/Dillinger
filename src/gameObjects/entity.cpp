@@ -1,15 +1,17 @@
 #include "entity.h"
 
+#include <QDebug>
 
-/*Entity::Entity()
+Entity::Entity(qreal width, qreal height)
 {
-    _actualSprite = new QPixmap(":/sprites/snoopyR.png");
-    _sprites.append(_actualSprite);
-}*/
+    _boundingBox.setWidth(width);
+    _boundingBox.setHeight(height);
+    _boundingBox.moveTo(0,0);
+}
 
 void Entity::draw(QPainter *p)
 {
-    p->drawPixmap(this->pos(), *_actualSprite);
+    p->drawRect(_boundingBox);
 }
 
 QPointF Entity::pos() const
@@ -19,12 +21,23 @@ QPointF Entity::pos() const
 
 void Entity::setPos(QPointF newPos)
 {
-    _boundingBox.setTopLeft(newPos);
+    _boundingBox.moveTo(newPos);
 }
 
 void Entity::setPos(qreal x, qreal y)
 {
-    _boundingBox.setTopLeft(QPointF(x,y));
+    _boundingBox.moveTo(x,y);
+}
+
+void Entity::moveBy(QPointF delta_pos)
+{
+    qDebug() << delta_pos;
+    _boundingBox.translate(delta_pos);
+}
+
+void Entity::moveBy(qreal x, qreal y)
+{
+    _boundingBox.translate(x,y);
 }
 
 orientation Entity::angle() const
@@ -35,6 +48,11 @@ orientation Entity::angle() const
 void Entity::setAngle(orientation newAngle)
 {
     _angle = newAngle;
+}
+
+QString Entity::getType() const
+{
+    return "Entity";
 }
 
 const QRectF &Entity::boundingBox() const

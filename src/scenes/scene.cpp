@@ -1,5 +1,5 @@
 #include "scene.h"
-
+#include "views/observer.h"
 
 void Scene::changed()
 {

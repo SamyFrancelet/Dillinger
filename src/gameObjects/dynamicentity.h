@@ -15,6 +15,10 @@ public:
 
 private:
     QPointF _speed;
+
+    // Entity interface
+public:
+    QString getType() const;
 };
 
 #endif // DYNAMICENTITY_H

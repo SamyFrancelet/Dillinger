@@ -1,17 +1,20 @@
 #ifndef PHYSICSENGINE_H
 #define PHYSICSENGINE_H
 
-#include "scenes/scene.h"
+#include "scenes/gamescene.h"
 
 class PhysicsEngine
 {
 public:
     PhysicsEngine();
 
-    void setScene(Scene* scene);
+    void setScene(GameScene* scene);
+
+    void simulate_step();
 
 private:
-    Scene *_scene;
+    GameScene*_scene;
+    qreal delta_t;
 };
 
 #endif // PHYSICSENGINE_H

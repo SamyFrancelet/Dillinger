@@ -126,8 +126,8 @@ package views {
     gameW .up.|> obs
 }
 
-scene o-> obs : "#observers"
-obs o-> scene : "#theScene"
+scene o--> obs : "#observers"
+obs o--> scene : "#theScene"
 
 package GameLogic {
     class PhysicsEngine {

@@ -15,6 +15,8 @@ public:
 
     void addEntity(Entity* e);
 
+    QList<Entity*> getEntities();
+
 private:
     QList<Entity*> entities;
 };
