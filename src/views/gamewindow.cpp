@@ -47,3 +47,13 @@ void GameWindow::keyReleaseEvent(QKeyEvent *event)
     }
 }
 
+void GameWindow::mousePressEvent(QMouseEvent *event)
+{
+    qDebug() << event->scenePosition();
+}
+
+void GameWindow::mouseReleaseEvent(QMouseEvent *event)
+{
+    //event->scenePosition();
+}
+
