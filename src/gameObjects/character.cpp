@@ -1,7 +1,7 @@
 #include "character.h"
 
 Character::Character()
-	: DynamicEntity(50, 50)
+    : DynamicEntity(20, 20)
 {
 
 }

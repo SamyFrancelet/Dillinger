@@ -17,7 +17,18 @@ void GameScene::addEntity(Entity *e)
     entities.append(e);
 }
 
+void GameScene::addPlayer(Player *p)
+{
+    _player = p;
+    entities.append(p);
+}
+
 QList<Entity *> GameScene::getEntities()
 {
     return entities;
+}
+
+Player *GameScene::getPlayer()
+{
+    return _player;
 }

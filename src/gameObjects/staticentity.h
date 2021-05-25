@@ -7,11 +7,18 @@ class StaticEntity : public Entity
 {
 public:
     StaticEntity(qreal width, qreal height);	
+    bool isTransparent() const;
+    bool isNoiseMuffler() const;
+    bool isTangible() const;
 
-private:
-	bool isTransparent;
-	bool isNoiseMuffler;
-	bool isTangible;
+protected:
+    bool _isTransparent;
+    bool _isNoiseMuffler;
+    bool _isTangible;
+
+    // Entity interface
+public:
+    QString getType() const;
 };
 
 #endif // STATICENTITY_H

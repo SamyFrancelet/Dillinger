@@ -20,22 +20,25 @@ package gameObjects {
 
     abstract "Entity" as entity {
         -boundingBox : QRectF
-
+        --
+        +Entity(width : qreal, height : qreal)
         +draw(p : QPainter) : void
 		..Setters..
         +setPosition(pos : QPointF) : void
         +setPosition(x : qreal, y : qreal) : void
-		+getType() : QString
 		..Getters..
-        +getBoundingBox() : QRectF
-        +getPosition() : QPointF
+        +pos() : QPointF
+        +boundingBox() : QRectF
+        +getType() : QString
     }
 
     together {
         abstract "StaticEntity" as statE {
-            -isTransparent : boolean
-            -isNoiseMuffler : boolean
-            -isTangible : boolean
+            #isTransparent : boolean
+            #isNoiseMuffler : boolean
+            #isTangible : boolean
+            --
+            +StaticEntity(width : qreal, height : qreal)
 			..Implementations..
 			+getType() : QString
 			..Getters..
@@ -46,40 +49,52 @@ package gameObjects {
 
         abstract "DynamicEntity" as dynE {
             -speed : QPointF
-			-angle : qreal
 			-sprites : QPixmap
+            --
+            +DynamicEntity(width : qreal, height : qreal)
 			..Implementations..
-			+draw(p : QPainter) : void
+            +getType() : QString
 			..Setters..
             +setSpeed(speed : QPointF) : void
             +setSpeed(x : qreal, y : qreal) : void
-			+setAngle(angle : qreal) : void
 			..Getters..
             +getSpeed() : QPointF
-			+getAngle() : qreal
         }
 
-        abstract "Viewer" as viewer
+        abstract "Viewer" as viewer {
+            -angle : qreal
+
+            +setAngle(angle : qreal) : void
+            +getAngle() : qreal
+        }
 
         abstract "Listener" as listener
     }
 
     class "Glass" as glass {
+        --
+        +Glass(width : qreal, height : qreal)
 		..Implementations..
 		+draw(p : QPainter) : void
 	}
 
     class "Wall" as wall {
+        --
+        +Wall(width : qreal, height : qreal)
 		..Implementations..
 		+draw(p : QPainter) : void
 	}
 
     class "CCTV" as cam {
+        --
+        +CCTV()
 		..Implementations..
 		+draw(p : QPainter) : void
 	}
 
     abstract "Character" as charac {
+        --
+        +Character()
 		..Implementations..
 		+draw(p : QPainter) : void
 	}
@@ -89,6 +104,7 @@ package gameObjects {
     class "Cop" as cop
 
     class "Player" as player {
+        --
 		..Implementations..
 		+draw(p : QPainter) : void
 	}

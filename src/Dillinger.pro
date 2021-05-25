@@ -12,6 +12,7 @@ SOURCES += \
     gameLogic/gamelogic.cpp \
     gameObjects/character.cpp \
     gameObjects/dynamicentity.cpp \
+    gameObjects/player.cpp \
     gameObjects/staticentity.cpp \
     gameObjects/wall.cpp \
     main.cpp \
@@ -25,6 +26,7 @@ HEADERS += \
     gameObjects/character.h \
     gameObjects/dynamicentity.h \
     gameObjects/entity.h \
+    gameObjects/player.h \
     gameObjects/staticentity.h \
     gameObjects/wall.h \
     scenes/scene.h \

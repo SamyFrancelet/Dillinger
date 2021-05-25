@@ -25,6 +25,7 @@ protected:
     void paintEvent(QPaintEvent *event);
 
     void keyPressEvent(QKeyEvent *event);
+    void keyReleaseEvent(QKeyEvent *event);
 
 private:
     GameLogic* _c;

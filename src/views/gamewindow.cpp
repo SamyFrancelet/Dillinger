@@ -1,6 +1,7 @@
 #include "gamewindow.h"
 #include "scenes/scene.h"
 #include <QPainter>
+#include <QKeyEvent>
 
 GameWindow::GameWindow(QWidget *parent)
 {
@@ -34,6 +35,15 @@ void GameWindow::paintEvent(QPaintEvent *event)
 
 void GameWindow::keyPressEvent(QKeyEvent *event)
 {
-    _c->move_step();
+    if( !event->isAutoRepeat() ){
+        _c->keyPressed(event->key());
+    }
+}
+
+void GameWindow::keyReleaseEvent(QKeyEvent *event)
+{
+    if( !event->isAutoRepeat() ){
+        _c->keyReleased(event->key());
+    }
 }
 

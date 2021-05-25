@@ -4,24 +4,21 @@
 #include <QPainter>
 #include <QPoint>
 
-enum orientation { UP, DOWN, LEFT, RIGHT, UP_LEFT, UP_RIGHT, DOWN_LEFT, DOWN_RIGHT };
-
 class Entity
 {
 public:
     Entity(qreal width, qreal height);
 
-    virtual void draw(QPainter* p);
+    virtual void draw(QPainter* p) = 0;
 
-    const QRectF &boundingBox() const;
-
-    QPointF pos() const;
     void setPos(QPointF newPos);
     void setPos(qreal x, qreal y);
 
     void moveBy(QPointF delta_pos);
     void moveBy(qreal x, qreal y);
 
+    QPointF pos() const;
+    const QRectF &boundingBox() const;
     virtual QString getType() const;
 
 private:
