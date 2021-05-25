@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    dillinger.cpp \
     gameLogic/gamelogic.cpp \
     gameObjects/character.cpp \
     gameObjects/dynamicentity.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
     views/gamewindow.cpp
 
 HEADERS += \
+    dillinger.h \
     gameLogic/gamelogic.h \
     gameObjects/character.h \
     gameObjects/dynamicentity.h \
