@@ -20,20 +20,15 @@ package gameObjects {
 
     abstract "Entity" as entity {
         -boundingBox : QRectF
-        -angle : qreal
-
-        #sprites : QPixmap
-        #selectSprite : QPixmap
 
         +draw(p : QPainter) : void
-
+		..Setters..
         +setPosition(pos : QPointF) : void
         +setPosition(x : qreal, y : qreal) : void
-        +setAngle(angle : orientation) : void
-
+		+getType() : QString
+		..Getters..
         +getBoundingBox() : QRectF
         +getPosition() : QPointF
-        +getAngle() : orientation
     }
 
     together {
@@ -41,7 +36,9 @@ package gameObjects {
             -isTransparent : boolean
             -isNoiseMuffler : boolean
             -isTangible : boolean
-
+			..Implementations..
+			+getType() : QString
+			..Getters..
             +isTransparent() : boolean
             +isNoiseMuffler() : boolean
             +isTangible() : boolean
@@ -49,11 +46,17 @@ package gameObjects {
 
         abstract "DynamicEntity" as dynE {
             -speed : QPointF
-
+			-angle : qreal
+			-sprites : QPixmap
+			..Implementations..
+			+draw(p : QPainter) : void
+			..Setters..
             +setSpeed(speed : QPointF) : void
             +setSpeed(x : qreal, y : qreal) : void
-
+			+setAngle(angle : qreal) : void
+			..Getters..
             +getSpeed() : QPointF
+			+getAngle() : qreal
         }
 
         abstract "Viewer" as viewer
@@ -61,19 +64,34 @@ package gameObjects {
         abstract "Listener" as listener
     }
 
-    class "Glass" as glass
+    class "Glass" as glass {
+		..Implementations..
+		+draw(p : QPainter) : void
+	}
 
-    class "Wall" as wall
+    class "Wall" as wall {
+		..Implementations..
+		+draw(p : QPainter) : void
+	}
 
-    class "Camera" as cam
+    class "CCTV" as cam {
+		..Implementations..
+		+draw(p : QPainter) : void
+	}
 
-    abstract "Character" as charac
+    abstract "Character" as charac {
+		..Implementations..
+		+draw(p : QPainter) : void
+	}
 
     class "Guard" as guard
 
     class "Cop" as cop
 
-    class "Player" as player
+    class "Player" as player {
+		..Implementations..
+		+draw(p : QPainter) : void
+	}
 
     statE ..|> entity
     dynE ..|> entity
@@ -88,9 +106,9 @@ package gameObjects {
     cop ..|> charac
     player ..|> charac
 
+	cam ..|> viewer
     charac ..|> viewer
     charac ..|> listener
-    cam ..|> viewer
 }
 
 package scenes {
@@ -100,16 +118,16 @@ package scenes {
         +draw(p : QPainter) : void
     }
 
-    class Menu {
+    class "Menu" as menu {
 
     }
 
-    class GameScene {
+    class "GameScene" as gScene {
 
     }
 
-    Menu .up.|> scene
-    GameScene .up.|> scene
+    menu .up.|> scene
+    gScene .up.|> scene
 }
 
 package views {
@@ -129,10 +147,32 @@ package views {
 scene o--> obs : "#observers"
 obs o--> scene : "#theScene"
 
-package GameLogic {
-    class PhysicsEngine {
+package gameLogic {
+	abstract "Controller" as c {
+
+	}
+
+	class "MenuController" as mc {
+
+	}
+
+    class "GameLogic" as gLogic {
 
     }
+
+	class "EnnemiAI" as ai {
+
+	}
+
+	class "PlayerControls" as pControls {
+
+	}
+
+	gLogic ..|> c
+	mc ..|> c
+
+	gLogic --> ai
+	gLogic --> pControls
 }
 
 @enduml

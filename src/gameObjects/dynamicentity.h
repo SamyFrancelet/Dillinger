@@ -6,7 +6,7 @@
 class DynamicEntity : public Entity
 {
 public:
-    DynamicEntity();
+    DynamicEntity(qreal width, qreal height);
 
     void setSpeed(QPointF speed);
     void setSpeed(qreal x, qreal y);

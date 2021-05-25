@@ -1,10 +1,10 @@
 #include "dynamicentity.h"
 
-DynamicEntity::DynamicEntity()
-    : Entity(60,70)
+DynamicEntity::DynamicEntity(qreal width, qreal height)
+    : Entity(width, height)
 {
-    _actualSprite = new QPixmap(":/sprites/snoopyR.png");
-    _sprites.append(_actualSprite);
+    /*_actualSprite = new QPixmap(":/sprites/snoopyR.png");
+    _sprites.append(_actualSprite);*/
 }
 
 void DynamicEntity::setSpeed(QPointF speed)

@@ -9,5 +9,5 @@ Wall::Wall(qreal width, qreal height)
 void Wall::draw(QPainter *p)
 {
     p->setBrush(Qt::Dense1Pattern);
-    p->drawRect(_boundingBox);
+    p->drawRect(boundingBox());
 }

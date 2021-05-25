@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
     g->show();
 
-    DynamicEntity* d = new DynamicEntity();
+    DynamicEntity* d = new DynamicEntity(20,20);
     s->addEntity(d);
     d->setPos(100,100);
     d->setSpeed(1,1);

@@ -6,7 +6,12 @@
 class StaticEntity : public Entity
 {
 public:
-    StaticEntity(qreal width, qreal height);
+    StaticEntity(qreal width, qreal height);	
+
+private:
+	bool isTransparent;
+	bool isNoiseMuffler;
+	bool isTangible;
 };
 
 #endif // STATICENTITY_H

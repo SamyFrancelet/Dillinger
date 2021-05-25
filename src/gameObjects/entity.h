@@ -22,15 +22,9 @@ public:
     void moveBy(QPointF delta_pos);
     void moveBy(qreal x, qreal y);
 
-    qreal angle() const;
-    void setAngle(qreal newAngle);
-
     virtual QString getType() const;
 
-protected:
-    QList<QPixmap*> _sprites;
-    QPixmap* _actualSprite;
-    qreal _angle;
+private:
     QRectF _boundingBox;
 };
 
