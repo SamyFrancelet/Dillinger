@@ -12,7 +12,7 @@ GameWindow::~GameWindow()
 {
 }
 
-void GameWindow::setController(GameLogic *c)
+void GameWindow::setController(Controller *c)
 {
     _c = c;
 }

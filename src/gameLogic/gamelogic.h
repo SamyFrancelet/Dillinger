@@ -17,12 +17,19 @@ private slots:
     void game_step();
 
 private:
+    void playerCatch();
     void detections();
     void move_step();
 
     GameScene* _scene;
     qreal delta_t;
     QTimer moveTimer;
+
+    // Controller interface
+public:
+    void keyPressed(int key);
+    void keyReleased(int key);
+    void mouseClick(QPointF pos);
 };
 
 #endif // GAMELOGIC_H

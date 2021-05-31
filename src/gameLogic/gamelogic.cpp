@@ -2,6 +2,7 @@
 
 #include "gameObjects/dynamicentity.h"
 #include "gameObjects/staticentity.h"
+#include "gameObjects/enemy.h"
 
 #include <QDebug>
 
@@ -81,10 +82,32 @@ void GameLogic::keyReleased(int key)
     _scene->getPlayer()->setSpeed(playerSpeed);
 }
 
+void GameLogic::mouseClick(QPointF pos)
+{
+
+}
+
 void GameLogic::game_step()
 {
+    playerCatch();
     detections();
     move_step();
+}
+
+void GameLogic::playerCatch()
+{
+    Player* player = _scene->getPlayer();
+    if(player != NULL) { // If there is a player
+        QList<Entity*> entities = _scene->getEntities();
+
+        for(Entity* e : entities) { // Can be optimised, but work flawlessly for this little game
+            if(e != player){
+                if(e->boundingBox().intersects(player->boundingBox())) {
+                    qDebug() << "Touched !";
+                }
+            }
+        }
+    }
 }
 
 void GameLogic::move_step()

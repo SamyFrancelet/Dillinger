@@ -2,7 +2,7 @@
 #define GAMEWINDOW_H
 
 #include <QWidget>
-#include "gameLogic/gamelogic.h"
+#include "gameLogic/controller.h"
 #include "observer.h"
 
 class GameWindow : public QWidget, public Observer
@@ -13,7 +13,7 @@ public:
     GameWindow(QWidget *parent = nullptr);
     ~GameWindow();
 
-    void setController(GameLogic* c);
+    void setController(Controller* c);
 
     // Observer interface
 public:
@@ -31,6 +31,6 @@ protected:
     void mouseReleaseEvent(QMouseEvent *event);
 
 private:
-    GameLogic* _c;
+    Controller* _c;
 };
 #endif // GAMEWINDOW_H
