@@ -2,9 +2,10 @@
 #define GAMELOGIC_H
 
 #include "scenes/gamescene.h"
+#include "controller.h"
 #include <QTimer>
 
-class GameLogic : public QObject
+class GameLogic : public QObject, public Controller
 {
     Q_OBJECT
 public:
@@ -12,13 +13,13 @@ public:
 
     void setScene(GameScene* scene);
 
-    void keyPressed(int key);
-    void keyReleased(int key);
-
 private slots:
-    void move_step();
+    void game_step();
 
 private:
+    void detections();
+    void move_step();
+
     GameScene* _scene;
     qreal delta_t;
     QTimer moveTimer;

@@ -13,6 +13,7 @@ SOURCES += \
     gameLogic/gamelogic.cpp \
     gameObjects/character.cpp \
     gameObjects/dynamicentity.cpp \
+    gameObjects/enemy.cpp \
     gameObjects/player.cpp \
     gameObjects/staticentity.cpp \
     gameObjects/wall.cpp \
@@ -24,9 +25,11 @@ SOURCES += \
 
 HEADERS += \
     dillinger.h \
+    gameLogic/controller.h \
     gameLogic/gamelogic.h \
     gameObjects/character.h \
     gameObjects/dynamicentity.h \
+    gameObjects/enemy.h \
     gameObjects/entity.h \
     gameObjects/player.h \
     gameObjects/staticentity.h \

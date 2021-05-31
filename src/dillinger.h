@@ -5,6 +5,7 @@
 #include "scenes/gamescene.h"
 #include "gameLogic/gamelogic.h"
 #include "gameObjects/player.h"
+#include "gameObjects/enemy.h"
 #include "gameObjects/wall.h"
 
 class Dillinger

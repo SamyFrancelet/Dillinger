@@ -30,6 +30,7 @@ void GameWindow::stop()
 void GameWindow::paintEvent(QPaintEvent *event)
 {
     QPainter p(this);
+
     _s->draw(&p);
 }
 

@@ -99,15 +99,17 @@ package gameObjects {
 		+draw(p : QPainter) : void
 	}
 
+    class "Player" as player {
+        --
+        ..Implementations..
+        +draw(p : QPainter) : void
+    }
+
+    abstract "Enemy" as enemy
+
     class "Guard" as guard
 
     class "Cop" as cop
-
-    class "Player" as player {
-        --
-		..Implementations..
-		+draw(p : QPainter) : void
-	}
 
     statE ..|> entity
     dynE ..|> entity
@@ -118,13 +120,15 @@ package gameObjects {
 
     charac ..|> dynE
 
-    guard ..|> charac
-    cop ..|> charac
+    enemy ..|> charac
+
+    guard ..|> enemy
+    cop ..|> enemy
     player ..|> charac
 
 	cam ..|> viewer
-    charac ..|> viewer
-    charac ..|> listener
+    enemy ..|> viewer
+    enemy ..|> listener
 }
 
 package scenes {
@@ -165,7 +169,9 @@ obs o--> scene : "#theScene"
 
 package gameLogic {
 	abstract "Controller" as c {
-
+        keyPressed(key : int);
+        keyReleased(key : int);
+        mouseClick(pos : QPointF)
 	}
 
 	class "MenuController" as mc {
@@ -180,15 +186,15 @@ package gameLogic {
 
 	}
 
-	class "PlayerControls" as pControls {
-
-	}
-
 	gLogic ..|> c
 	mc ..|> c
 
 	gLogic --> ai
-	gLogic --> pControls
 }
+
+gameW o--> c : "#theController"
+
+mc o-up-> menu : "#theScene"
+gLogic o-up-> gScene : "#theScene"
 
 @enduml

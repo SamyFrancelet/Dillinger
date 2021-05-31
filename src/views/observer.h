@@ -1,7 +1,7 @@
 #ifndef OBSERVER_H
 #define OBSERVER_H
 
-#include "scenes/scene.h"¨
+#include "scenes/scene.h"
 
 class Observer
 {

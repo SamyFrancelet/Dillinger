@@ -7,6 +7,6 @@ Player::Player()
 
 void Player::draw(QPainter *p)
 {
-    p->setBrush(QColor(255,0,0));
+    p->setBrush(QColor(0,255,0));
     p->drawEllipse(boundingBox());
 }
