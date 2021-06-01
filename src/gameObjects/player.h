@@ -3,6 +3,8 @@
 
 #include "character.h"
 
+#define PLAYER_SPEED 100
+
 class Player : public Character
 {
 public:

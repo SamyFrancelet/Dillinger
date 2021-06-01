@@ -7,8 +7,8 @@
 
 #define CONE_LENGTH 200.0
 #define CONE_WIDTH 100.0
-#define CONE_ANGLE 60
-#define N_RAYS 100
+#define CONE_ANGLE 70.0
+#define N_RAYS 150 // Number of rays (minus the central ray)
 
 class Watcher
 {
@@ -25,10 +25,7 @@ public:
     void moveBy(qreal x, qreal y);
 
     void setAngle(qreal angle);
-
-    void cutViewCone(QPolygonF cutter);
-
-    const QPolygonF &viewCone() const;
+    void rotate(qreal angle);
 
     QPointF *lastKnownPos() const;
 
@@ -37,8 +34,9 @@ public:
 private:
     QPointF* _lastKnownPos;
     QList<QLineF*> _viewRays;
-    QPolygonF _viewCone;
     qreal _angle;
+
+    void generateViewRays(QPointF origin);
 };
 
 #endif // WATCHER_H

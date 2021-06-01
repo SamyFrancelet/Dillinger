@@ -22,6 +22,8 @@ private:
     void pathfinding();
     void move_step();
 
+    void calculateViewRays();
+
     GameScene* _scene;
     qreal delta_t;
     QTimer moveTimer;

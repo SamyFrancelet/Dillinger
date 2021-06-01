@@ -8,8 +8,8 @@ class DynamicEntity : public Entity
 public:
     DynamicEntity(qreal width, qreal height);
 
-    void setSpeed(QPointF speed);
-    void setSpeed(qreal x, qreal y);
+    virtual void setSpeed(QPointF speed);
+    virtual void setSpeed(qreal x, qreal y);
 
     QPointF getSpeed();
 

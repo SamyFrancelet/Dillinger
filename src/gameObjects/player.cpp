@@ -7,7 +7,8 @@ Player::Player()
 
 void Player::draw(QPainter *p)
 {
-    p->setPen(QColor(0,0,0,255));
+    Entity::draw(p);
+
     p->setBrush(QColor(0,255,0));
     p->drawEllipse(boundingBox());
 }

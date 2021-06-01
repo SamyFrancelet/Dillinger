@@ -9,12 +9,6 @@ GameScene::GameScene()
 void GameScene::draw(QPainter *p)
 {
     for(Entity* e : entities) {
-        if(e->getName() == "Enemy"){
-            Wall w8(20, 400);
-            w8.setPos(500, 500);
-            Enemy* en = (Enemy*) e;
-            en->cutViewCone(w8.boundingBox());
-        }
         e->draw(p);
     }
 }

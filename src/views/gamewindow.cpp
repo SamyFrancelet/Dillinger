@@ -55,6 +55,7 @@ void GameWindow::mousePressEvent(QMouseEvent *event)
 
 void GameWindow::mouseReleaseEvent(QMouseEvent *event)
 {
+    qDebug() << event->scenePosition();
     //event->scenePosition();
 }
 
