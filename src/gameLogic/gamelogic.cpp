@@ -90,24 +90,44 @@ void GameLogic::mouseClick(QPointF pos)
 void GameLogic::game_step()
 {
     playerCatch();
-    detections();
     move_step();
+    detections();
 }
 
 void GameLogic::playerCatch()
 {
     Player* player = _scene->getPlayer();
     if(player != NULL) { // If there is a player
-        QList<Entity*> entities = _scene->getEntities();
-
-        for(Entity* e : entities) { // Can be optimised, but work flawlessly for this little game
-            if(e != player){
-                if(e->boundingBox().intersects(player->boundingBox())) {
-                    qDebug() << "Touched !";
-                }
+        QList<Enemy*> guards = _scene->getGuards();
+        for(Enemy* guard : guards) {
+            if (guard->boundingBox().intersects(player->boundingBox())) {
+                qDebug() << "Touché !";
             }
         }
     }
+}
+
+
+void GameLogic::detections()
+{
+    const Player* player = _scene->getPlayer();
+    if(player != NULL) {
+        const QList<Watcher*> & watchers = _scene->getWatchers();
+
+        for (Watcher* e : watchers) {
+            if(e->viewCone().containsPoint(player->boundingBox().center(), Qt::OddEvenFill)
+                    || e->viewCone().intersects(player->boundingBox()))
+            {
+                e->seenAt(player->boundingBox().center());
+                qDebug() << "Seen at pos :" << *e->lastKnownPos();
+            }
+        }
+    }
+}
+
+void GameLogic::pathfinding()
+{
+
 }
 
 void GameLogic::move_step()
@@ -147,9 +167,4 @@ void GameLogic::move_step()
         }
     }
     _scene->changed();
-}
-
-void GameLogic::detections()
-{
-
 }

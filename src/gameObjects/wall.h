@@ -11,6 +11,10 @@ public:
     // Entity interface
 public:
     void draw(QPainter *p);
+
+    // Entity interface
+public:
+    QString getName() const;
 };
 
 #endif // WALL_H

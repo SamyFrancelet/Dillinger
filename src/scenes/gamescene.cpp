@@ -1,4 +1,5 @@
 #include "gamescene.h"
+#include "gameObjects/wall.h"
 
 GameScene::GameScene()
 {
@@ -8,6 +9,12 @@ GameScene::GameScene()
 void GameScene::draw(QPainter *p)
 {
     for(Entity* e : entities) {
+        if(e->getName() == "Enemy"){
+            Wall w8(20, 400);
+            w8.setPos(500, 500);
+            Enemy* en = (Enemy*) e;
+            en->cutViewCone(w8.boundingBox());
+        }
         e->draw(p);
     }
 }
@@ -15,6 +22,19 @@ void GameScene::draw(QPainter *p)
 void GameScene::addEntity(Entity *e)
 {
     entities.append(e);
+
+    if (e->getName() == "Player") {
+        addPlayer(dynamic_cast<Player*>(e));
+    }
+
+    if (e->getName() == "Enemy") {
+        guards.append(dynamic_cast<Enemy*>(e));
+        watchers.append(dynamic_cast<Watcher*>(e));
+    }
+
+    if (e->getName() == "CCTV") {
+        watchers.append(dynamic_cast<Watcher*>(e));
+    }
 }
 
 void GameScene::addPlayer(Player *p)
@@ -23,12 +43,22 @@ void GameScene::addPlayer(Player *p)
     entities.append(p);
 }
 
-QList<Entity *> GameScene::getEntities()
+const QList<Entity *> &GameScene::getEntities() const
 {
     return entities;
 }
 
-Player *GameScene::getPlayer()
+const QList<Watcher *> &GameScene::getWatchers() const
+{
+    return watchers;
+}
+
+const QList<Enemy *> &GameScene::getGuards() const
+{
+    return guards;
+}
+
+Player *GameScene::getPlayer() const
 {
     return _player;
 }

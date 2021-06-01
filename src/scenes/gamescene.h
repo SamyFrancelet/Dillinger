@@ -3,6 +3,7 @@
 
 #include "scene.h"
 #include "gameObjects/entity.h"
+#include "gameObjects/enemy.h"
 #include "gameObjects/player.h"
 
 class GameScene : public Scene
@@ -17,11 +18,20 @@ public:
     void addEntity(Entity* e);
     void addPlayer(Player* p);
 
-    QList<Entity*> getEntities();
-    Player* getPlayer();
+
+
+    const QList<Entity *> &getEntities() const;
+
+    const QList<Watcher *> &getWatchers() const;
+
+    const QList<Enemy *> &getGuards() const;
+
+    Player *getPlayer() const;
 
 private:
     QList<Entity*> entities;
+    QList<Watcher*> watchers;
+    QList<Enemy*> guards;
     Player* _player;
 };
 

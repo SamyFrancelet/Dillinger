@@ -1,3 +1,4 @@
+
 #include "dillinger.h"
 
 Dillinger::Dillinger()
@@ -11,16 +12,13 @@ void Dillinger::loadLevel(int level)
     _c = new GameLogic(0.05);
     _s = new GameScene();
 
-    _g->setScene(_s);
-    _g->setController(_c);
-    _c->setScene(_s);
-
     Player* p = new Player();
     p->setPos(60,60);
     _s->addPlayer(p);
 
     Enemy* schlaggados = new Enemy();
     schlaggados->setPos(600,500);
+    schlaggados->setAngle(72);
     _s->addEntity(schlaggados);
 
     Wall* w1 = new Wall(200, 20);
@@ -54,6 +52,10 @@ void Dillinger::loadLevel(int level)
     Wall* w8 = new Wall(20, 400);
     w8->setPos(500, 500);
     _s->addEntity(w8);
+
+    _g->setScene(_s);
+    _g->setController(_c);
+    _c->setScene(_s);
 
     _g->show();
 }

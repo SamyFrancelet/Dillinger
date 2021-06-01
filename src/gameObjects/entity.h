@@ -20,6 +20,7 @@ public:
     QPointF pos() const;
     const QRectF &boundingBox() const;
     virtual QString getType() const;
+    virtual QString getName() const = 0;
 
 private:
     QRectF _boundingBox;

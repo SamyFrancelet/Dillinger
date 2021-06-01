@@ -11,6 +11,8 @@ public:
     // Entity interface
 public:
     void draw(QPainter *p);
+
+    QString getName() const;
 };
 
 #endif // PLAYER_H

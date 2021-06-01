@@ -7,15 +7,6 @@ Entity::Entity(qreal width, qreal height)
     _boundingBox.moveTo(0,0);
 }
 
-/*void Entity::draw(QPainter *p)
-{
-    QTransform tr;
-    tr.rotate(_angle);
-    QPixmap temp = _actualSprite->transformed(tr);
-    p->drawPixmap(pos(), temp);
-    p->drawRect(_boundingBox);
-}*/
-
 QPointF Entity::pos() const
 {
     return _boundingBox.topLeft();

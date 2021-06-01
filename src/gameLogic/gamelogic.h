@@ -19,6 +19,7 @@ private slots:
 private:
     void playerCatch();
     void detections();
+    void pathfinding();
     void move_step();
 
     GameScene* _scene;

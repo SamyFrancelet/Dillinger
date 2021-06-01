@@ -17,6 +17,7 @@ SOURCES += \
     gameObjects/player.cpp \
     gameObjects/staticentity.cpp \
     gameObjects/wall.cpp \
+    gameObjects/watcher.cpp \
     main.cpp \
     gameObjects/entity.cpp \
     scenes/scene.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     gameObjects/player.h \
     gameObjects/staticentity.h \
     gameObjects/wall.h \
+    gameObjects/watcher.h \
     scenes/scene.h \
     scenes/gamescene.h \
     views/gamewindow.h \
