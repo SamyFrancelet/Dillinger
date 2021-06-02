@@ -29,6 +29,15 @@ void Dillinger::loadLevel(int level)
     schlaggados->addPathStep(new QPointF(600,700));
     _s->addEntity(schlaggados);
 
+    Enemy* e1 = new Enemy();
+    e1->setPos(400,500);
+    _s->addEntity(e1);
+
+
+    Enemy* e2 = new Enemy();
+    e2->setPos(100,600);
+    _s->addEntity(e2);
+
     Wall* w1 = new Wall(200, 20);
     w1->setPos(0,200);
     _s->addEntity(w1);

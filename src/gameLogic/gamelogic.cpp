@@ -234,22 +234,24 @@ void GameLogic::calculateViewRays()
             if (e->getType() == "StaticEntity") {
                 StaticEntity* s = dynamic_cast<StaticEntity*>(e);
 
-                QList<QLineF> edges;
-                edges.clear();
-                edges.append(QLineF(s->boundingBox().topLeft(), s->boundingBox().topRight()));
-                edges.append(QLineF(s->boundingBox().bottomLeft(), s->boundingBox().bottomRight()));
-                edges.append(QLineF(s->boundingBox().topLeft(), s->boundingBox().bottomLeft()));
-                edges.append(QLineF(s->boundingBox().topRight(), s->boundingBox().bottomRight()));
+                if (!s->isTransparent()) { // If we can't see through
+                    QList<QLineF> edges;
+                    edges.clear();
+                    edges.append(QLineF(s->boundingBox().topLeft(), s->boundingBox().topRight()));
+                    edges.append(QLineF(s->boundingBox().bottomLeft(), s->boundingBox().bottomRight()));
+                    edges.append(QLineF(s->boundingBox().topLeft(), s->boundingBox().bottomLeft()));
+                    edges.append(QLineF(s->boundingBox().topRight(), s->boundingBox().bottomRight()));
 
-                for (QLineF* ray : w->viewRays()) {
-                    qreal minLength = CONE_LENGTH;
-                    for (QLineF edge : edges) {
-                        QPointF crossing;
-                        if (ray->intersects(edge, &crossing) == QLineF::BoundedIntersection) {
-                            qreal length = QLineF(ray->p1(), crossing).length();
-                            if (length < minLength) {
-                                minLength = length;
-                                ray->setP2(crossing);
+                    for (QLineF* ray : w->viewRays()) {
+                        qreal minLength = CONE_LENGTH;
+                        for (QLineF edge : edges) {
+                            QPointF crossing;
+                            if (ray->intersects(edge, &crossing) == QLineF::BoundedIntersection) {
+                                qreal length = QLineF(ray->p1(), crossing).length();
+                                if (length < minLength) {
+                                    minLength = length;
+                                    ray->setP2(crossing);
+                                }
                             }
                         }
                     }

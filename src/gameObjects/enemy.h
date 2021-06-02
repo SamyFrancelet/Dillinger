@@ -6,7 +6,7 @@
 
 #include <QVector>
 
-#define MAX_SPEED 200.0
+#define MAX_SPEED 100.0
 
 class Enemy : public Character, public Watcher
 {
