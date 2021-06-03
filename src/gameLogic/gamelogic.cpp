@@ -91,7 +91,9 @@ void GameLogic::game_step()
 {
     playerCatch();
     move_step();
+    calculateViewRays();
     detections();
+    _scene->changed();
 }
 
 void GameLogic::playerCatch()
@@ -223,8 +225,6 @@ void GameLogic::move_step()
             }
         }
     }
-    calculateViewRays();
-    _scene->changed();
 }
 
 void GameLogic::calculateViewRays()

@@ -1,7 +1,8 @@
 #include "character.h"
+#include "gameConstants.h"
 
 Character::Character()
-    : DynamicEntity(20, 20)
+    : DynamicEntity(TILE_SIZE, TILE_SIZE)
 {
 
 }

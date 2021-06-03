@@ -16,7 +16,7 @@ public:
     Watcher();
     ~Watcher();
 
-    void seenAt(QPointF pos);
+    virtual void seenAt(QPointF pos);
 
     void setPos(QPointF newPos);
     void setPos(qreal x, qreal y);

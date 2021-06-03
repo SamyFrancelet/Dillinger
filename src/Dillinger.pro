@@ -26,6 +26,7 @@ SOURCES += \
 
 HEADERS += \
     dillinger.h \
+    gameConstants.h \
     gameLogic/controller.h \
     gameLogic/gamelogic.h \
     gameObjects/character.h \

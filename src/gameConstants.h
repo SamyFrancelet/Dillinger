@@ -1,0 +1,9 @@
+#ifndef GAMECONSTANTS_H
+#define GAMECONSTANTS_H
+
+#define WINDOW_WIDTH 1280
+#define WINDOW_HEIGHT 900
+
+#define TILE_SIZE 20
+
+#endif // GAMECONSTANTS_H
