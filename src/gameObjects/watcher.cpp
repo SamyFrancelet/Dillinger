@@ -5,7 +5,7 @@
 
 Watcher::Watcher()
 {
-    _lastKnownPos = NULL;
+    _lastKnownPos = new QPointF(-100.0,-100.0);
 
     _angle = 0.0;
 
@@ -63,9 +63,9 @@ void Watcher::rotate(qreal angle)
     generateViewRays(currentPos);
 }
 
-QPointF *Watcher::lastKnownPos() const
+QPointF Watcher::lastKnownPos() const
 {
-    return _lastKnownPos;
+    return *_lastKnownPos;
 }
 
 const QList<QLineF *> &Watcher::viewRays() const

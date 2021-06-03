@@ -69,41 +69,6 @@ void Enemy::setSpeed(qreal x, qreal y)
     }
 }
 
-void Enemy::seenAt(QPointF pos)
-{
-    Watcher::seenAt(pos);
-
-    QVector<Node*> open;
-    QVector<Node*> closed;
-
-    Node* startNode = new Node;
-    startNode->pos = fromSceneToTile(this.pos());
-    startNode->cost = 0;
-
-    open.append(startNode);
-
-    while(true) {
-        int lowestCost = 100;
-        int nodePos = 0;
-        for (int i = 0; i < open.size(); i++) { // Detects node with smallest cost
-            if (open.at(i)->cost < lowestCost) {
-                lowestCost = open.at(i)->cost;
-                nodePos = i;
-            }
-        }
-
-        Node* current = open.at(nodePos);
-        closed.append(current);
-        open.removeAt(nodePos);
-
-        if (current->pos == fromSceneToTile(*lastKnownPos()))
-            break; // Path has been found
-
-        // J'ai plus la monstre envie là de suite, faut bouger cette méthode dans le contrôleur
-        // Parce qu'il faut savoir ou sont les murs...
-    }
-}
-
 QVector<QPointF*> &Enemy::path()
 {
     return _path;
@@ -119,16 +84,17 @@ void Enemy::setWalking(bool walking)
     _walking = walking;
 }
 
-void Enemy::addPathStep(QPointF *target)
+void Enemy::clearPath()
 {
-    _path.append(target);
+    _path.clear();
 }
 
-QPoint Enemy::fromSceneToTile(QPointF point)
+void Enemy::addPathStep(QPointF *step)
 {
-    QPoint tilePoint;
-    tilePoint.setX(point.x()/TILE_SIZE + TILE_SIZE/2);
-    tilePoint.setY(point.y()/TILE_SIZE + TILE_SIZE/2);
+    _path.append(step);
+}
 
-    return tilePoint;
+void Enemy::stackPathStep(QPointF *step)
+{
+    _path.push_front(step);
 }

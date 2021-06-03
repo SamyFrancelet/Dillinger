@@ -5,6 +5,7 @@
 #include <QPoint>
 #include <QPolygon>
 
+#define VIEW_LENGTH 200.0
 #define CONE_LENGTH 200.0
 #define CONE_WIDTH 100.0
 #define CONE_ANGLE 70.0
@@ -27,7 +28,7 @@ public:
     void setAngle(qreal angle);
     void rotate(qreal angle);
 
-    QPointF *lastKnownPos() const;
+    QPointF lastKnownPos() const;
 
     const QList<QLineF *> &viewRays() const;
 

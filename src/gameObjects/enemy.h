@@ -8,12 +8,6 @@
 
 #define MAX_SPEED 100.0
 
-struct Node
-{
-    QPoint pos;
-    int cost;
-};
-
 class Enemy : public Character, public Watcher
 {
 public:
@@ -24,10 +18,9 @@ public:
     bool getWalking() const;
     void setWalking(bool walking);
 
-    void addPathStep(QPointF* target);
-
-    QPoint fromSceneToTile(QPointF point);
-    QPointF fromTileToScene(QPoint point);
+    void clearPath();
+    void addPathStep(QPointF* step);
+    void stackPathStep(QPointF* step);
 
     // Entity interface
 public:
@@ -49,10 +42,6 @@ public:
 private:
     QVector<QPointF*> _path;
     bool _walking;
-
-    // Watcher interface
-public:
-    void seenAt(QPointF pos);
 };
 
 #endif // ENEMY_H

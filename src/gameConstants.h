@@ -4,6 +4,11 @@
 #define WINDOW_WIDTH 1280
 #define WINDOW_HEIGHT 900
 
-#define TILE_SIZE 20
+#define CHAR_SIZE 20
+
+#define TILE_SIZE 10
+
+#define DETECTION_N_FRAME 10
+#define DETECTION_LIMIT 20.0
 
 #endif // GAMECONSTANTS_H
