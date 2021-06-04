@@ -7,6 +7,7 @@
 #include "gameObjects/player.h"
 #include "gameObjects/enemy.h"
 #include "gameObjects/wall.h"
+#include "gameObjects/glass.h"
 
 class Dillinger
 {

@@ -1,4 +1,3 @@
-
 #include "dillinger.h"
 
 Dillinger::Dillinger()
@@ -54,7 +53,7 @@ void Dillinger::loadLevel(int level)
     w4->setPos(500, 0);
     _s->addEntity(w4);
 
-    Wall* w5 = new Wall(340, 20);
+    Glass* w5 = new Glass(340, 20);
     w5->setPos(520, 400);
     _s->addEntity(w5);
 

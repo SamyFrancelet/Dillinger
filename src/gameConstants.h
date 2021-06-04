@@ -8,7 +8,7 @@
 
 #define TILE_SIZE 10
 
-#define DETECTION_N_FRAME 10
-#define DETECTION_LIMIT 20.0
+#define DETECTION_N_FRAME 20
+#define DETECTION_LIMIT 5.0
 
 #endif // GAMECONSTANTS_H

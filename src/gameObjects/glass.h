@@ -1,12 +1,12 @@
-#ifndef WALL_H
-#define WALL_H
+#ifndef GLASS_H
+#define GLASS_H
 
 #include "staticentity.h"
 
-class Wall : public StaticEntity
+class Glass : public StaticEntity
 {
 public:
-    Wall(qreal width, qreal height);
+    Glass(qreal width, qreal height);
 
     // Entity interface
 public:
@@ -14,4 +14,4 @@ public:
     QString getName() const;
 };
 
-#endif // WALL_H
+#endif // GLASS_H

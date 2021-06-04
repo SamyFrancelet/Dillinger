@@ -14,6 +14,7 @@ SOURCES += \
     gameObjects/character.cpp \
     gameObjects/dynamicentity.cpp \
     gameObjects/enemy.cpp \
+    gameObjects/glass.cpp \
     gameObjects/player.cpp \
     gameObjects/staticentity.cpp \
     gameObjects/wall.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     gameObjects/dynamicentity.h \
     gameObjects/enemy.h \
     gameObjects/entity.h \
+    gameObjects/glass.h \
     gameObjects/player.h \
     gameObjects/staticentity.h \
     gameObjects/wall.h \
