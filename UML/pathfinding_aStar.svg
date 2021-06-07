@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1056px" preserveAspectRatio="none" style="width:1003px;height:1056px;background:#FFFFFF;" version="1.1" viewBox="0 0 1003 1056" width="1003px" zoomAndPan="magnify">
+    <defs />
+    <g>
+        <!--MD5=[be81bbc01e521904427e8d4c6c57f76d]
+cluster loop-->
+        <rect fill="#87CEEB" height="628" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="758" x="149" y="422" />
+        <rect fill="#FFFFFF" height="594.3906" rx="12.5" ry="12.5" style="stroke:#FFFFFF;stroke-width:1.0;" width="752" x="152" y="452.6094" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="149" x2="907" y1="449.6094" y2="449.6094" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="514.5" y="440.5332">loop</text>
+        <g id="loop.getCURR">
+            <rect fill="#87CEEB" height="52.7031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="261" x="192.5" y="466" />
+            <line style="stroke:#000000;stroke-width:1.5;" x1="192.5" x2="453.5" y1="493.6094" y2="493.6094" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="293.5" y="485.5332">getCURR</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="241" x="197.5" y="511.0664">CURRENT = node in OPEN with lowest cost</text>
+        </g>
+        <g id="loop.remCURR">
+            <rect fill="#87CEEB" height="52.7031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="189" x="488.5" y="466" />
+            <line style="stroke:#000000;stroke-width:1.5;" x1="488.5" x2="677.5" y1="493.6094" y2="493.6094" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="551.5" y="485.5332">remCURR</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="169" x="493.5" y="511.0664">remove CURRENT from OPEN</text>
+        </g>
+        <g id="loop.addCURR">
+            <rect fill="#87CEEB" height="52.7031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="170" x="713" y="466" />
+            <line style="stroke:#000000;stroke-width:1.5;" x1="713" x2="883" y1="493.6094" y2="493.6094" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="766.5" y="485.5332">addCURR</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="150" x="718" y="511.0664">add CURRENT to CLOSED</text>
+        </g>
+        <polygon fill="#FFFFFF" points="752,549,764,561,752,573,740,561,752,549" style="stroke:#000000;stroke-width:1.5;" />
+        <rect fill="#87CEEB" height="423.3125" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="420" x="238" y="603" />
+        <rect fill="#FFFFFF" height="389.7031" rx="12.5" ry="12.5" style="stroke:#FFFFFF;stroke-width:1.0;" width="414" x="241" y="633.6094" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="238" x2="658" y1="630.6094" y2="630.6094" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="382" y="622.5332">foreach NEIGHBOUR</text>
+        <g id="loop.for.isTraversable">
+            <rect fill="#87CEEB" height="52.7031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="289" x="305" y="642.6094" />
+            <line style="stroke:#000000;stroke-width:1.5;" x1="305" x2="594" y1="670.2188" y2="670.2188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="406.5" y="662.1426">isTraversable</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="269" x="310" y="687.6758">if NEIGHBOUR is traversable and is not CLOSED</text>
+        </g>
+        <g id="loop.for.isBetter">
+            <rect fill="#87CEEB" height="52.7031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="301" x="299" y="749.6094" />
+            <line style="stroke:#000000;stroke-width:1.5;" x1="299" x2="600" y1="777.2188" y2="777.2188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="425.5" y="769.1426">isBetter</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="281" x="304" y="794.6758">if new path is shorter OR NEIGHBOUR is not OPEN</text>
+        </g>
+        <g id="loop.for.calculate">
+            <rect fill="#87CEEB" height="52.7031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="399" x="250" y="856.6094" />
+            <line style="stroke:#000000;stroke-width:1.5;" x1="250" x2="649" y1="884.2188" y2="884.2188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="421.5" y="876.1426">calculate</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="379" x="255" y="901.6758">set cost of NEIGHBOUR and set parent of NEIGHBOUR to CURRENT</text>
+        </g>
+        <g id="loop.for.addNEIGH">
+            <rect fill="#87CEEB" height="52.7031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="167" x="366" y="963.6094" />
+            <line style="stroke:#000000;stroke-width:1.5;" x1="366" x2="533" y1="991.2188" y2="991.2188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="417" y="983.1426">addNEIGH</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="147" x="371" y="1008.6758">add NEIGHBOUR to OPEN</text>
+        </g>
+        <!--MD5=[e4c13d40a242dac4680a407b48545882]
+link isTraversable to isBetter-->
+        <path d="M449.5,695.7994 C449.5,710.4094 449.5,728.8194 449.5,744.2294 " fill="none" id="isTraversable-to-isBetter" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="449.5,749.3294,453.5,740.3294,449.5,744.3294,445.5,740.3294,449.5,749.3294" style="stroke:#000000;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="450.5" y="728.1045">yes</text>
+        <!--MD5=[42cd87260a6e6d07300c147b18011118]
+link isBetter to calculate-->
+        <path d="M449.5,802.7994 C449.5,817.4094 449.5,835.8194 449.5,851.2294 " fill="none" id="isBetter-to-calculate" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="449.5,856.3294,453.5,847.3294,449.5,851.3294,445.5,847.3294,449.5,856.3294" style="stroke:#000000;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="450.5" y="835.1045">yes</text>
+        <!--MD5=[deda224d0a1b636dbc2d22c6edf2604c]
+link calculate to addNEIGH-->
+        <path d="M449.5,909.7994 C449.5,924.4094 449.5,942.8194 449.5,958.2294 " fill="none" id="calculate-to-addNEIGH" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="449.5,963.3294,453.5,954.3294,449.5,958.3294,445.5,954.3294,449.5,963.3294" style="stroke:#000000;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164" x="450.5" y="942.1045">if NEIGHBOUR is not OPEN</text>
+        <ellipse cx="157" cy="16" fill="#000000" rx="10" ry="10" style="stroke:none;stroke-width:1.0;" />
+        <ellipse cx="987" cy="561" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;fill:none;" />
+        <ellipse cx="987.5" cy="561.5" fill="#000000" rx="6" ry="6" style="stroke:none;stroke-width:1.0;" />
+        <rect fill="#87CEEB" height="280.3125" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="300" x="7" y="87" />
+        <rect fill="#FFFFFF" height="246.7031" rx="12.5" ry="12.5" style="stroke:#FFFFFF;stroke-width:1.0;" width="294" x="10" y="117.6094" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="7" x2="307" y1="114.6094" y2="114.6094" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="148" y="106.5332">init</text>
+        <g id="init.initOPEN">
+            <rect fill="#87CEEB" height="52.7031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="227" x="45" y="126.6094" />
+            <line style="stroke:#000000;stroke-width:1.5;" x1="45" x2="272" y1="154.2188" y2="154.2188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="130.5" y="146.1426">initOPEN</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="207" x="50" y="171.6758">create OPEN, set of nodes to evaluate</text>
+        </g>
+        <g id="init.initCLOSED">
+            <rect fill="#87CEEB" height="52.7031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="279" x="19" y="215.6094" />
+            <line style="stroke:#000000;stroke-width:1.5;" x1="19" x2="298" y1="243.2188" y2="243.2188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="121" y="235.1426">initCLOSED</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="259" x="24" y="260.6758">create CLOSES, set of nodes already evaluated</text>
+        </g>
+        <g id="init.addSTART">
+            <rect fill="#87CEEB" height="52.7031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.5;" width="174" x="71.5" y="304.6094" />
+            <line style="stroke:#000000;stroke-width:1.5;" x1="71.5" x2="245.5" y1="332.2188" y2="332.2188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="123.5" y="324.1426">addSTART</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="154" x="76.5" y="349.6758">add START_NODE to OPEN</text>
+        </g>
+        <!--MD5=[8dfa91c3c9694fc66bf91f5e7b09f0f0]
+link initOPEN to initCLOSED-->
+        <path d="M158.5,179.7394 C158.5,189.2994 158.5,200.2594 158.5,210.2394 " fill="none" id="initOPEN-to-initCLOSED" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="158.5,215.3594,162.5,206.3594,158.5,210.3594,154.5,206.3594,158.5,215.3594" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[c683901c17c60fa8a094395ab54920be]
+link initCLOSED to addSTART-->
+        <path d="M158.5,268.7394 C158.5,278.2994 158.5,289.2594 158.5,299.2394 " fill="none" id="initCLOSED-to-addSTART" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="158.5,304.3594,162.5,295.3594,158.5,299.3594,154.5,295.3594,158.5,304.3594" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[847ec684daa39dd7b47d2a740511cfb5]
+link *start to init-->
+        <path d="M157,26.25 C157,37.53 157,58.07 157,81.82 " fill="none" id="*start-to-init" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="157,86.93,161,77.93,157,81.93,153,77.93,157,86.93" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[29f782f6036a5150f20595317bb52c85]
+link getCURR to remCURR-->
+        <path d="M453.51,492.5 C463.41,492.5 473.32,492.5 483.23,492.5 " fill="none" id="getCURR-to-remCURR" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="488.41,492.5,479.41,488.5,483.41,492.5,479.41,496.5,488.41,492.5" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[e4aa4b81966c231a2f77d82a38665011]
+link remCURR to addCURR-->
+        <path d="M677.9,492.5 C687.76,492.5 697.61,492.5 707.46,492.5 " fill="none" id="remCURR-to-addCURR" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="712.62,492.5,703.62,488.5,707.62,492.5,703.62,496.5,712.62,492.5" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[c9b6dd01d200958007487b0c63f915c8]
+link addCURR to c-->
+        <path d="M780.35,519.02 C773.08,529.53 765.06,541.13 759.41,549.29 " fill="none" id="addCURR-to-c" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="756.53,553.45,764.9454,548.3332,759.379,549.3411,758.3711,543.7748,756.53,553.45" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[40695cef36175e7346a84c8663ff1263]
+link c to for-->
+        <path d="M745.93,567.02 C733.05,577.68 701,604.19 662.46,636.08 " fill="none" id="c-to-for" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="658.22,639.58,667.7016,636.9155,662.0693,636.3889,662.5959,630.7567,658.22,639.58" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[2eef777237dda8dcb16e795324e21487]
+link for to for-->
+        <path d="M658.41,775.82 C679.54,783.52 693,796.41 693,814.5 C693,831.17 681.56,843.44 663.22,851.28 " fill="none" id="for-to-for" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="658.41,853.18,668.2508,853.5775,663.0573,851.3354,665.2994,846.1418,658.41,853.18" style="stroke:#000000;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150" x="699" y="819.9951">is not traversable or better</text>
+        <!--MD5=[316ea47f2eb016072e9af12835e105d1]
+reverse link getCURR to for-->
+        <path d="M334.93,524.04 C342.71,543.96 353.63,571.92 365.65,602.68 " fill="none" id="getCURR-backto-for" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="333.02,519.15,332.5598,528.9881,334.835,523.8089,340.0141,526.0841,333.02,519.15" style="stroke:#000000;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="153" x="354" y="566.4951">every neighbour calculated</text>
+        <!--MD5=[4c265a17194339d0f0ed81bfd41b6eb8]
+link c to *end-->
+        <path d="M764.3,561 C803.97,561 928.43,561 971.87,561 " fill="none" id="c-to-*end" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="976.98,561,967.98,557,971.98,561,967.98,565,976.98,561" style="stroke:#000000;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="176" x="782.5" y="554.4951">"CURRENT is the target node"</text>
+        <!--MD5=[9ffbbb19e39ea923a5d3207bb9cddcc6]
+link init to loop-->
+        <path d="M157,367.08 C157,382.6675 157,398.1181 157,412.5553 C157,414.36 157,416.1488 157,417.92 C157,418.8057 157,419.6869 157,420.5636 C157,421.0019 157,421.4391 157,421.8751 " fill="none" id="init-to-loop" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="157,421.8751,161,412.8751,157,416.8751,153,412.8751,157,421.8751" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[63dfe9c71b044db8658c865b16077c0b]
+@startuml pathfinding_aStar
+
+skinparam shadowing false
+
+skinparam Arrow {
+    Color black
+}
+
+'for choice state
+skinparam activity {
+    BackgroundColor white
+    BorderColor black
+}
+
+skinparam state {
+    BackgroundColor skyblue
+    BorderColor black
+}
+
+state init {
+	initOPEN : create OPEN, set of nodes to evaluate
+	initCLOSED : create CLOSES, set of nodes already evaluated
+
+	addSTART : add START_NODE to OPEN
+
+	initOPEN -down-> initCLOSED
+	initCLOSED -down-> addSTART
+}
+
+[*] - -> init
+
+state loop {
+	getCURR : CURRENT = node in OPEN with lowest cost
+	remCURR : remove CURRENT from OPEN
+	addCURR : add CURRENT to CLOSED
+
+	getCURR -> remCURR
+	remCURR -> addCURR
+
+	state c <<choice>>
+
+	state "foreach NEIGHBOUR" as for {
+		isTraversable : if NEIGHBOUR is traversable and is not CLOSED
+
+		isBetter : if new path is shorter OR NEIGHBOUR is not OPEN
+
+		calculate : set cost of NEIGHBOUR and set parent of NEIGHBOUR to CURRENT
+
+		addNEIGH : add NEIGHBOUR to OPEN
+
+		isTraversable - -> isBetter : yes
+		isBetter - -> calculate : yes
+
+		calculate - -> addNEIGH : if NEIGHBOUR is not OPEN
+	}
+
+	addCURR -> c
+	c -> for : else
+	for -> for : is not traversable or better
+	for -up-> getCURR : every neighbour calculated
+}
+
+c -> [*] : "CURRENT is the target node"
+
+init - -> loop
+
+@enduml
+
+@startuml pathfinding_aStar
+
+skinparam shadowing false
+
+skinparam Arrow {
+    Color black
+}
+
+skinparam activity {
+    BackgroundColor white
+    BorderColor black
+}
+
+skinparam state {
+    BackgroundColor skyblue
+    BorderColor black
+}
+
+state init {
+	initOPEN : create OPEN, set of nodes to evaluate
+	initCLOSED : create CLOSES, set of nodes already evaluated
+
+	addSTART : add START_NODE to OPEN
+
+	initOPEN -down-> initCLOSED
+	initCLOSED -down-> addSTART
+}
+
+[*] - -> init
+
+state loop {
+	getCURR : CURRENT = node in OPEN with lowest cost
+	remCURR : remove CURRENT from OPEN
+	addCURR : add CURRENT to CLOSED
+
+	getCURR -> remCURR
+	remCURR -> addCURR
+
+	state c <<choice>>
+
+	state "foreach NEIGHBOUR" as for {
+		isTraversable : if NEIGHBOUR is traversable and is not CLOSED
+
+		isBetter : if new path is shorter OR NEIGHBOUR is not OPEN
+
+		calculate : set cost of NEIGHBOUR and set parent of NEIGHBOUR to CURRENT
+
+		addNEIGH : add NEIGHBOUR to OPEN
+
+		isTraversable - -> isBetter : yes
+		isBetter - -> calculate : yes
+
+		calculate - -> addNEIGH : if NEIGHBOUR is not OPEN
+	}
+
+	addCURR -> c
+	c -> for : else
+	for -> for : is not traversable or better
+	for -up-> getCURR : every neighbour calculated
+}
+
+c -> [*] : "CURRENT is the target node"
+
+init - -> loop
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 14:40:07 CEST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: fr
+Country: CH
+-->
+    </g>
+</svg>

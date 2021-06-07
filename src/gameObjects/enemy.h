@@ -6,17 +6,19 @@
 
 #include <QVector>
 
-#define MAX_SPEED 100.0
-
+/**
+ * @brief The Enemy class, represent either a cop or a guard
+ */
 class Enemy : public Character, public Watcher
 {
 public:
     Enemy();
 
+    /**
+     * @brief path to follow
+     * @return a Vector array with each point to follow
+     */
     QVector<QPointF*> &path();
-
-    bool getWalking() const;
-    void setWalking(bool walking);
 
     void clearPath();
     void addPathStep(QPointF* step);
@@ -41,7 +43,6 @@ public:
 
 private:
     QVector<QPointF*> _path;
-    bool _walking;
 };
 
 #endif // ENEMY_H

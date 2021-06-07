@@ -3,19 +3,22 @@
 #include "gameObjects/dynamicentity.h"
 #include "gameObjects/staticentity.h"
 #include "gameObjects/enemy.h"
+#include "dillinger.h"
 
 #include <QDebug>
 
 GameLogic::GameLogic(qreal step_time)
 {
-    delta_t = step_time;
-    qreal frame_time = step_time * 1000.0;
-    moveTimer.setInterval(frame_time);
+    delta_t = step_time; // Physics timer
+    qreal frame_time = step_time * 1000.0; // Frame time in millisec
+    moveTimer.setInterval(frame_time); // Sets physics/frame timer
     moveTimer.start();
 
+    // Sets detection timer, to ameliorate performance
     detectionTimer.setInterval(frame_time * DETECTION_N_FRAME);
     detectionTimer.start();
 
+    // Qt connect
     connect(&moveTimer, SIGNAL(timeout()), this, SLOT(game_step()));
     connect(&detectionTimer, SIGNAL(timeout()), this, SLOT(detections()));
 }
@@ -27,7 +30,7 @@ void GameLogic::setScene(GameScene *scene)
 
 void GameLogic::keyPressed(int key)
 {
-    QPointF playerSpeed = _scene->getPlayer()->getSpeed();
+    QPointF playerSpeed = _scene->player()->getSpeed();
     switch (key) {
     case Qt::Key_W:
     //case Qt::Key_Up:
@@ -53,12 +56,12 @@ void GameLogic::keyPressed(int key)
         break;
     }
 
-    _scene->getPlayer()->setSpeed(playerSpeed);
+    _scene->player()->setSpeed(playerSpeed);
 }
 
 void GameLogic::keyReleased(int key)
 {
-    QPointF playerSpeed = _scene->getPlayer()->getSpeed();
+    QPointF playerSpeed = _scene->player()->getSpeed();
     switch (key) {
     case Qt::Key_W:
     //case Qt::Key_Up:
@@ -84,7 +87,7 @@ void GameLogic::keyReleased(int key)
         break;
     }
 
-    _scene->getPlayer()->setSpeed(playerSpeed);
+    _scene->player()->setSpeed(playerSpeed);
 }
 
 void GameLogic::mouseClick(QPointF pos)
@@ -94,21 +97,26 @@ void GameLogic::mouseClick(QPointF pos)
 
 void GameLogic::game_step()
 {
-    playerCatch();
-    move_step();
-    calculateViewRays();
+    playerCatch(); // Check if player has been caught
 
-    _scene->changed();
+    if (_scene->player()->caught()) { // If caught
+        gameOver(); // Reload level
+    } else {
+        // Normal game frame
+        move_step();
+        calculateViewRays();
+        _scene->changed();
+    }
 }
 
 void GameLogic::playerCatch()
 {
-    Player* player = _scene->getPlayer();
+    Player* player = _scene->player();
     if(player != NULL) { // If there is a player
-        QList<Enemy*> guards = _scene->getGuards();
+        QList<Enemy*> guards = _scene->guards();
         for(Enemy* guard : guards) {
             if (guard->boundingBox().intersects(player->boundingBox())) {
-                qDebug() << "Touché !";
+                player->gotCaught();
             }
         }
     }
@@ -117,7 +125,7 @@ void GameLogic::playerCatch()
 
 void GameLogic::detections()
 {
-    const Player* player = _scene->getPlayer();
+    const Player* player = _scene->player();
     Watcher* detector = NULL;
     bool detected = false;
 
@@ -128,8 +136,9 @@ void GameLogic::detections()
         edges.append(QLineF(player->boundingBox().topLeft(), player->boundingBox().bottomLeft()));
         edges.append(QLineF(player->boundingBox().topRight(), player->boundingBox().bottomRight()));
 
-        for (Watcher* w : _scene->getWatchers()) {
-            if (QLineF(player->center(), w->viewRays().first()->p1()).length() < CONE_LENGTH + 20) {
+        for (Watcher* w : _scene->watchers()) {
+            // Checks if player is near enough to calculate ray detections
+            if (QLineF(player->center(), w->viewRays().first()->p1()).length() < VIEW_LENGTH + 20) {
                 //qDebug() << "In range";
                 for (QLineF* ray : w->viewRays()) {
                     for (QLineF edge : edges) {
@@ -148,23 +157,30 @@ void GameLogic::detections()
             if(detected) break;
         }
 
+        // If detected
         if (detected && QLineF(detector->lastKnownPos(), player->center()).length() > DETECTION_LIMIT) {
             pathfinding();
         }
     }
 }
 
+void GameLogic::gameOver()
+{
+    // Reload level
+    Dillinger::getInstance()->loadLevel(1);
+}
+
 void GameLogic::pathfinding()
 {
     // Alert everyone
-    for (Watcher* w : _scene->getWatchers()) {
-        w->seenAt(_scene->getPlayer()->center());
+    for (Watcher* w : _scene->watchers()) {
+        w->seenAt(_scene->player()->center());
     }
 
     QVector<QPoint> notTraversables;
 
     // Map every point that is not traversable
-    for (Entity* e : _scene->getEntities()) {
+    for (Entity* e : _scene->entities()) {
         if (e->getType() == "StaticEntity") {
             StaticEntity* s = dynamic_cast<StaticEntity*>(e);
 
@@ -179,7 +195,7 @@ void GameLogic::pathfinding()
         }
     }
 
-    for (Enemy* g : _scene->getGuards()) {
+    for (Enemy* g : _scene->guards()) {
         if (QLineF(g->center(), g->lastKnownPos()).length() < VIEW_LENGTH) { // If near enough
             g->clearPath();
             g->addPathStep(new QPointF(g->lastKnownPos()));
@@ -284,7 +300,7 @@ void GameLogic::pathfinding()
                 Node* n = endNode;
                 qDebug() << "Path found !";
                 qDebug() << "I'm here : " << g->center();
-                qDebug() << "You are here : " << _scene->getPlayer()->center() << g->lastKnownPos();
+                qDebug() << "You are here : " << _scene->player()->center() << g->lastKnownPos();
                 g->clearPath();
 
                 while (n->parent != NULL) {
@@ -302,9 +318,9 @@ void GameLogic::pathfinding()
 
 void GameLogic::move_step()
 {
-    for (Entity* e : _scene->getEntities()) {
+    for (Entity* e : _scene->entities()) {
         if (e->getType() == "DynamicEntity")
-        { // If the entity is dynamic
+        { // If the entity is dynamic, calculate next position
             DynamicEntity* d = dynamic_cast<DynamicEntity*>(e);
             QPointF oldPos = d->pos();
             d->moveBy(d->getSpeed() * delta_t);
@@ -317,7 +333,7 @@ void GameLogic::move_step()
             }
 
             // Collisions entity on entity
-            for(Entity* others : _scene->getEntities())
+            for(Entity* others : _scene->entities())
             {
                 if(others->getType() == "StaticEntity")
                 {
@@ -345,11 +361,11 @@ void GameLogic::move_step()
 
                     // Scaling to control speed
                     if (abs(speedX) > abs(speedY)) {
-                        speedY *= MAX_SPEED/abs(speedX);
-                        speedX *= MAX_SPEED/abs(speedX);
+                        speedY *= ENEMY_MAX_SPEED/abs(speedX);
+                        speedX *= ENEMY_MAX_SPEED/abs(speedX);
                     } else {
-                        speedX *= MAX_SPEED/abs(speedY);
-                        speedY *= MAX_SPEED/abs(speedY);
+                        speedX *= ENEMY_MAX_SPEED/abs(speedY);
+                        speedY *= ENEMY_MAX_SPEED/abs(speedY);
                     }
                     en->setSpeed(speedX, speedY);
 
@@ -369,8 +385,9 @@ void GameLogic::move_step()
 
 void GameLogic::calculateViewRays()
 {
-    for (Watcher* w : _scene->getWatchers()) {
-        for (Entity* e : _scene->getEntities()) {
+    // Checks every ray of every watcher to calculate where rays pass or not
+    for (Watcher* w : _scene->watchers()) {
+        for (Entity* e : _scene->entities()) {
             if (e->getType() == "StaticEntity") {
                 StaticEntity* s = dynamic_cast<StaticEntity*>(e);
 
@@ -383,10 +400,11 @@ void GameLogic::calculateViewRays()
                     edges.append(QLineF(s->boundingBox().topRight(), s->boundingBox().bottomRight()));
 
                     for (QLineF* ray : w->viewRays()) {
-                        qreal minLength = CONE_LENGTH;
+                        qreal minLength = VIEW_LENGTH;
                         for (QLineF edge : edges) {
                             QPointF crossing;
                             if (ray->intersects(edge, &crossing) == QLineF::BoundedIntersection) {
+                                // If we intersects something, sets new extremity to intersection point
                                 qreal length = QLineF(ray->p1(), crossing).length();
                                 if (length < minLength) {
                                     minLength = length;

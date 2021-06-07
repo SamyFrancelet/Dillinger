@@ -3,6 +3,9 @@
 
 #include "scenes/scene.h"
 
+/**
+ * @brief The Observer abstract class, observes a scene and draw everything when scene has changed
+ */
 class Observer
 {
 public:

@@ -1,0 +1,67 @@
+@startuml pathfinding_aStar
+
+skinparam shadowing false
+
+skinparam Arrow {
+    Color black
+}
+
+'for choice state
+skinparam activity {
+    BackgroundColor white
+    BorderColor black
+}
+
+skinparam state {
+    BackgroundColor skyblue
+    BorderColor black
+}
+
+state init {
+	initOPEN : create OPEN, set of nodes to evaluate
+	initCLOSED : create CLOSES, set of nodes already evaluated
+
+	addSTART : add START_NODE to OPEN
+
+	initOPEN -down-> initCLOSED
+	initCLOSED -down-> addSTART
+}
+
+[*] --> init
+
+state loop {
+	getCURR : CURRENT = node in OPEN with lowest cost
+	remCURR : remove CURRENT from OPEN
+	addCURR : add CURRENT to CLOSED
+
+	getCURR -> remCURR
+	remCURR -> addCURR
+
+	state c <<choice>>
+
+	state "foreach NEIGHBOUR" as for {
+		isTraversable : if NEIGHBOUR is traversable and is not CLOSED
+
+		isBetter : if new path is shorter OR NEIGHBOUR is not OPEN
+
+		calculate : set cost of NEIGHBOUR and set parent of NEIGHBOUR to CURRENT
+
+		addNEIGH : add NEIGHBOUR to OPEN
+
+		isTraversable --> isBetter : yes
+		isBetter --> calculate : yes
+
+		calculate --> addNEIGH : if NEIGHBOUR is not OPEN
+	}
+
+	addCURR -> c
+	c -> for : else
+	for -> for : is not traversable or better
+	for -up-> getCURR : every neighbour calculated
+}
+
+c -> [*] : "CURRENT is the target node"
+
+init --> loop
+
+@enduml

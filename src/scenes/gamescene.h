@@ -6,6 +6,9 @@
 #include "gameObjects/enemy.h"
 #include "gameObjects/player.h"
 
+/**
+ * @brief The GameScene class, model containing every game objects to draw
+ */
 class GameScene : public Scene
 {
 public:
@@ -13,25 +16,27 @@ public:
 
     // Scene interface
 public:
+    /**
+     * @brief draw every game entities
+     * @param p, the widget painter
+     */
     void draw(QPainter *p);
 
     void addEntity(Entity* e);
     void addPlayer(Player* p);
 
+    const QList<Entity *> &entities() const;
 
+    const QList<Watcher *> &watchers() const;
 
-    const QList<Entity *> &getEntities() const;
+    const QList<Enemy *> &guards() const;
 
-    const QList<Watcher *> &getWatchers() const;
-
-    const QList<Enemy *> &getGuards() const;
-
-    Player *getPlayer() const;
+    Player *player() const;
 
 private:
-    QList<Entity*> entities;
-    QList<Watcher*> watchers;
-    QList<Enemy*> guards;
+    QList<Entity*> _entities;
+    QList<Watcher*> _watchers;
+    QList<Enemy*> _guards;
     Player* _player;
 };
 

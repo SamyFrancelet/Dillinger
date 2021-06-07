@@ -3,6 +3,11 @@
 
 class QPointF;
 
+/**
+ * @brief The Controller interface
+ * Represents a controller, that receives keyPresses and mousClick
+ * from a Qt Widget
+ */
 class Controller
 {
 public:

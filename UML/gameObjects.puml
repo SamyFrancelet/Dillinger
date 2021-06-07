@@ -1,0 +1,92 @@
+@startuml gameObjects
+
+skinparam shadowing false
+'skinparam linetype polyline
+'skinparam linetype ortho
+
+skinparam class {
+    ArrowColor black
+    BorderColor black
+    BackGroundColor lightgrey
+}
+
+skinparam package {
+    ArrowColor black
+    BorderColor black
+    BackGroundColor white
+}
+
+    abstract "Entity" as entity {
+
+    }
+
+    together {
+        abstract "StaticEntity" as statE {
+
+        }
+
+        abstract "DynamicEntity" as dynE {
+
+        }
+
+        abstract "Watcher" as viewer {
+
+        }
+    }
+
+    class "Glass" as glass {
+
+	}
+
+    class "Wall" as wall {
+
+	}
+
+    class "CCTV" as cam {
+	}
+
+	class "Exit" as exit {
+
+	}
+
+	class "Money" as money {
+
+	}
+
+    abstract "Character" as charac {
+
+	}
+
+    class "Player" as player {
+
+    }
+
+    abstract "Enemy" as enemy {
+
+	}
+
+    class "Guard" as guard
+
+    class "Cop" as cop
+
+    statE ..|> entity
+    dynE ..|> entity
+
+    glass ..|> statE
+    wall ..|> statE
+    cam ..|> statE
+	exit ..|> statE
+	money ..|> statE
+
+    charac ..|> dynE
+
+    enemy ..|> charac
+
+    guard ..|> enemy
+    cop ..|> enemy
+    player ..|> charac
+
+	cam ..|> viewer
+    enemy ..|> viewer
+
+@enduml

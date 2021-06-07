@@ -1,0 +1,34 @@
+@startuml simple
+
+skinparam shadowing false
+'skinparam linetype polyline
+'skinparam linetype ortho
+
+skinparam class {
+    ArrowColor black
+    BorderColor black
+    BackGroundColor lightgrey
+}
+
+skinparam package {
+    ArrowColor black
+    BorderColor black
+    BackGroundColor white
+}
+
+class Scene
+
+class Window
+
+class GameLogic
+
+class Entity
+
+Scene o-right-> Window : "observer"
+Window o-left-> Scene : "theScene"
+Window o-up-> GameLogic : "theController"
+GameLogic o-down-> Scene : "theScene"
+
+Scene o-left-> Entity : "entities"
+
+@enduml

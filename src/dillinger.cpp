@@ -2,12 +2,31 @@
 
 Dillinger::Dillinger()
 {
-
+    _g = new GameWindow();
+    _c = nullptr;
+    _s = nullptr;
 }
+
+Dillinger *Dillinger::getInstance()
+{
+    if (instance == NULL) {
+        instance = new Dillinger();
+    }
+
+    return instance;
+}
+
+Dillinger *Dillinger::instance = NULL;
 
 void Dillinger::loadLevel(int level)
 {
-    _g = new GameWindow();
+    if (_c != nullptr && _s != nullptr) {
+        delete _c;
+        _c = nullptr;
+        delete _s;
+        _s = nullptr;
+    }
+
     _c = new GameLogic(0.01);
     _s = new GameScene();
 

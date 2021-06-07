@@ -3,6 +3,9 @@
 
 #include "staticentity.h"
 
+/**
+ * @brief The Wall class, can not be seen through
+ */
 class Wall : public StaticEntity
 {
 public:

@@ -67,8 +67,6 @@ package gameObjects {
             +setAngle(angle : qreal) : void
             +getAngle() : qreal
         }
-
-        abstract "Listener" as listener
     }
 
     class "Glass" as glass {
@@ -92,6 +90,20 @@ package gameObjects {
 		+draw(p : QPainter) : void
 	}
 
+	class "Exit" as exit {
+		--
+        +Exit()
+		..Implementations..
+		+draw(p : QPainter) : void
+	}
+
+	class "Money" as money {
+		--
+		+Money()
+		..Implementations..
+		+draw(p : QPainter) : void
+	}
+
     abstract "Character" as charac {
         --
         +Character()
@@ -105,7 +117,14 @@ package gameObjects {
         +draw(p : QPainter) : void
     }
 
-    abstract "Enemy" as enemy
+    abstract "Enemy" as enemy {
+		-path: QPointF
+		--
+		+clearPath() : void
+		+addPathSet(step : QPointF) : void
+		..Implementations..
+        +draw(p : QPainter) : void
+	}
 
     class "Guard" as guard
 
@@ -117,6 +136,8 @@ package gameObjects {
     glass ..|> statE
     wall ..|> statE
     cam ..|> statE
+	exit ..|> statE
+	money ..|> statE
 
     charac ..|> dynE
 
@@ -128,7 +149,6 @@ package gameObjects {
 
 	cam ..|> viewer
     enemy ..|> viewer
-    enemy ..|> listener
 }
 
 package scenes {
@@ -143,7 +163,8 @@ package scenes {
     }
 
     class "GameScene" as gScene {
-
+		..Implementations..
+		+draw(p : QPainter) : void
     }
 
     menu .up.|> scene
@@ -179,22 +200,24 @@ package gameLogic {
 	}
 
     class "GameLogic" as gLogic {
-
+		--
+		-move_step() : void
+		-gameOver() : void
+		..Implementations..
+		keyPressed(key : int);
+        keyReleased(key : int);
+        mouseClick(pos : QPointF)
     }
-
-	class "EnnemiAI" as ai {
-
-	}
 
 	gLogic ..|> c
 	mc ..|> c
-
-	gLogic --> ai
 }
 
 gameW o--> c : "#theController"
 
 mc o-up-> menu : "#theScene"
 gLogic o-up-> gScene : "#theScene"
+
+gScene o--> entity : "-entities"
 
 @enduml

@@ -1,16 +1,15 @@
 #ifndef WATCHER_H
 #define WATCHER_H
 
+#include "gameConstants.h"
+
 #include <QLineF>
 #include <QPoint>
 #include <QPolygon>
 
-#define VIEW_LENGTH 200.0
-#define CONE_LENGTH 200.0
-#define CONE_WIDTH 100.0
-#define CONE_ANGLE 70.0
-#define N_RAYS 150 // Number of rays (minus the central ray)
-
+/**
+ * @brief The Watcher class, represent an object that can see the player
+ */
 class Watcher
 {
 public:
@@ -28,8 +27,16 @@ public:
     void setAngle(qreal angle);
     void rotate(qreal angle);
 
+    /**
+     * @brief lastKnownPos of the player
+     * @return the last coordinate where the player was seen
+     */
     QPointF lastKnownPos() const;
 
+    /**
+     * @brief all view Rays of the Watcher
+     * @return A list of every Line representing a view ray
+     */
     const QList<QLineF *> &viewRays() const;
 
 private:

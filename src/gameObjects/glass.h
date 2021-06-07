@@ -3,6 +3,9 @@
 
 #include "staticentity.h"
 
+/**
+ * @brief The Glass class, can be seen through
+ */
 class Glass : public StaticEntity
 {
 public:

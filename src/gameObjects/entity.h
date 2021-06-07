@@ -6,6 +6,9 @@
 
 #define DRAW_BOUNDINGBOXES false
 
+/**
+ * @brief The Entity class, base class for every game objects
+ */
 class Entity
 {
 public:

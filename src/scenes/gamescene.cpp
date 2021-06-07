@@ -8,51 +8,51 @@ GameScene::GameScene()
 
 void GameScene::draw(QPainter *p)
 {
-    for(Entity* e : entities) {
+    for(Entity* e : _entities) {
         e->draw(p);
     }
 }
 
 void GameScene::addEntity(Entity *e)
 {
-    entities.append(e);
+    _entities.append(e);
 
     if (e->getName() == "Player") {
         addPlayer(dynamic_cast<Player*>(e));
     }
 
     if (e->getName() == "Enemy") {
-        guards.append(dynamic_cast<Enemy*>(e));
-        watchers.append(dynamic_cast<Watcher*>(e));
+        _guards.append(dynamic_cast<Enemy*>(e));
+        _watchers.append(dynamic_cast<Watcher*>(e));
     }
 
     if (e->getName() == "CCTV") {
-        watchers.append(dynamic_cast<Watcher*>(e));
+        _watchers.append(dynamic_cast<Watcher*>(e));
     }
 }
 
 void GameScene::addPlayer(Player *p)
 {
     _player = p;
-    entities.append(p);
+    _entities.append(p);
 }
 
-const QList<Entity *> &GameScene::getEntities() const
+const QList<Entity *> &GameScene::entities() const
 {
-    return entities;
+    return _entities;
 }
 
-const QList<Watcher *> &GameScene::getWatchers() const
+const QList<Watcher *> &GameScene::watchers() const
 {
-    return watchers;
+    return _watchers;
 }
 
-const QList<Enemy *> &GameScene::getGuards() const
+const QList<Enemy *> &GameScene::guards() const
 {
-    return guards;
+    return _guards;
 }
 
-Player *GameScene::getPlayer() const
+Player *GameScene::player() const
 {
     return _player;
 }

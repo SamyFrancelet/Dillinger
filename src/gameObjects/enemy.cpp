@@ -4,7 +4,7 @@
 
 Enemy::Enemy()
 {
-    _walking = false;
+
 }
 
 void Enemy::draw(QPainter *p)
@@ -72,16 +72,6 @@ void Enemy::setSpeed(qreal x, qreal y)
 QVector<QPointF*> &Enemy::path()
 {
     return _path;
-}
-
-bool Enemy::getWalking() const
-{
-    return _walking;
-}
-
-void Enemy::setWalking(bool walking)
-{
-    _walking = walking;
 }
 
 void Enemy::clearPath()

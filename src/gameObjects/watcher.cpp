@@ -79,8 +79,8 @@ void Watcher::generateViewRays(QPointF origin)
     for(int i = -N_RAYS/2; i <= N_RAYS/2; i++)
     {
         QLineF* temp;
-        qreal shiftAngle = CONE_ANGLE * (i)/(N_RAYS);
-        QPointF extremity(CONE_LENGTH, 0);
+        qreal shiftAngle = VIEW_ANGLE * (i)/(N_RAYS);
+        QPointF extremity(VIEW_LENGTH, 0);
         temp = new QLineF(origin, extremity + origin);
         temp->setAngle(_angle + shiftAngle);
         _viewRays.append(temp);

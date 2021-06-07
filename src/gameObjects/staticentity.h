@@ -3,6 +3,9 @@
 
 #include "entity.h"
 
+/**
+ * @brief The StaticEntity class, represents every non-moving objects
+ */
 class StaticEntity : public Entity
 {
 public:

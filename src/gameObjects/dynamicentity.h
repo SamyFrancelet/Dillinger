@@ -3,6 +3,9 @@
 
 #include "entity.h"
 
+/**
+ * @brief The DynamicEntity class, represent a moving object
+ */
 class DynamicEntity : public Entity
 {
 public:
